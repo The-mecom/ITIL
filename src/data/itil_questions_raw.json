@@ -1,0 +1,602 @@
+{
+  "title": "ITIL 4 Foundation (ITILFND V4) — Questions, Answers & Textbook Index",
+  "source_documents": {
+    "exam": "ITILFNDV4_Redacted 1.pdf",
+    "textbook": "ITIL 4 Foundation (official edition)"
+  },
+  "total_questions": 333,
+  "answer_key_distribution": {
+    "A": 85,
+    "B": 83,
+    "C": 99,
+    "D": 66
+  },
+  "method": "Each question was parsed from the exam PDF (question stem, four options A-D, and the marked correct answer). The correct answer was then matched against the ITIL 4 Foundation textbook using TF-IDF retrieval (unigrams + bigrams) to attach the supporting passage(s) and page reference. match_confidence is the retrieval relevance score (0-1); higher means a closer textbook match.",
+  "notes": [
+    "Terminology: the exam uses 'change enablement'; this textbook edition uses the equivalent term 'change control'. These are mapped as the same practice.",
+    "textbook_page numbers refer to the PDF page position in the supplied textbook file.",
+    "explanation restates the verified correct answer and quotes the supporting textbook passage; it does not add facts beyond the cited excerpt."
+  ],
+  "questions": [
+    {
+      "question_number": 1,
+      "question": "How are target resolution times used in the 'incident management' practice?",
+      "options": {
+        "A": "They are agreed, documented, and communicated to help set user expectations",
+        "B": "They are established, reviewed, and reported to ensure that customers are happy with the service",
+        "C": "They are initiated, approved, and managed to ensure that predictable responses are achieved",
+        "D": "They are scheduled, assessed and authorized to reduce the risk of service failures"
+      },
+      "correct_answer": "A",
+      "correct_answer_text": "They are agreed, documented, and communicated to help set user expectations",
+      "explanation": "Correct answer: A — \"They are agreed, documented, and communicated to help set user expectations\". This is strongly supported by the ITIL 4 Foundation guidance on p.131 (Chapter 5 – ITIL management practices), which states: \"Incident management can have an enormous impact on customer and user satisfaction, and on how customers and users perceive the service provider. Every incident should be logged and managed to ensure that it is resolved in a time that meets the expectations of the customer and user. Target resolution times are agreed, documented, and communicated to ensure that expectations are realistic. Incidents are prioritized based on an agreed classification to ensure that incidents with the highest business impact are resolved first. Organizations should design their incident management practice to…\"",
+      "textbook_references": [
+        {
+          "textbook_page": 131,
+          "chapter": "Chapter 5 – ITIL management practices",
+          "relevance": 0.337,
+          "excerpt": "Incident management can have an enormous impact on customer and user satisfaction, and on how customers and users perceive the service provider. Every incident should be logged and managed to ensure that it is resolved in a time that meets the expectations of the customer and user. Target resolution times are agreed, documented, and communicated to ensure that expectations are realistic. Incidents are prioritized based on an agreed classification to ensure that incidents with the highest business impact are resolved first. Organizations should design their incident management practice to…"
+        },
+        {
+          "textbook_page": 154,
+          "chapter": "Chapter 5 – ITIL management practices",
+          "relevance": 0.102,
+          "excerpt": "Service continuity management versus incident management Service continuity management focuses on those events that the business considers significant enough to be treated as a disaster. Less significant events will be dealt with as part of incident management or major incident management. The distinction between disasters, major incidents, and incidents needs to be pre-defined, agreed, and documented with clear thresholds and triggers for calling the next tier of response and recovery into action without unnecessary delay and risk."
+        }
+      ],
+      "top_match_page": 131,
+      "match_confidence": 0.337
+    },
+    {
+      "question_number": 2,
+      "question": "Why should some service requests be fulfilled with no additional approvals?",
+      "options": {
+        "A": "To ensure that spending is properly accounted for",
+        "B": "To ensure that information security requirements are met",
+        "C": "To streamline the fulfilment workflow",
+        "D": "To set user expectations for fulfilment times"
+      },
+      "correct_answer": "C",
+      "correct_answer_text": "To streamline the fulfilment workflow",
+      "explanation": "Correct answer: C — \"To streamline the fulfilment workflow\". This is strongly supported by the ITIL 4 Foundation guidance on p.166 (Chapter 5 – ITIL management practices), which states: \"Fulfilment of service requests may include changes to services or their components; usually these are standard changes. Service requests are a normal part of service delivery and are not a failure or degradation of service, which are handled as incidents. Since service requests are pre-defined and pre-agreed as a normal part of service delivery, they can usually be formalized, with a clear, standard procedure for initiation, approval, fulfilment, and management. Some service requests have very simple workflows, such as a request for information. Others, such as the setup of a new employee,…\"",
+      "textbook_references": [
+        {
+          "textbook_page": 166,
+          "chapter": "Chapter 5 – ITIL management practices",
+          "relevance": 0.23,
+          "excerpt": "Fulfilment of service requests may include changes to services or their components; usually these are standard changes. Service requests are a normal part of service delivery and are not a failure or degradation of service, which are handled as incidents. Since service requests are pre-defined and pre-agreed as a normal part of service delivery, they can usually be formalized, with a clear, standard procedure for initiation, approval, fulfilment, and management. Some service requests have very simple workflows, such as a request for information. Others, such as the setup of a new employee,…"
+        },
+        {
+          "textbook_page": 167,
+          "chapter": "Chapter 5 – ITIL management practices",
+          "relevance": 0.168,
+          "excerpt": "Some service requests can be completely fulfilled by automation from submission to closure, allowing for a complete self-service experience. Examples include client software installation or provision of virtual servers. Service request management is dependent upon well-designed processes and procedures, which are operationalized through tracking and automation tools to maximize the efficiency of the practice. Different types of service request will have different fulfilment workflows, but both efficiency and maintainability will be improved if a limited number of workflow models are…"
+        }
+      ],
+      "top_match_page": 166,
+      "match_confidence": 0.23
+    },
+    {
+      "question_number": 3,
+      "question": "What is a set of specialized organizational capabilities for enabling value for customers in the form of services?",
+      "options": {
+        "A": "Service offering",
+        "B": "Service provision",
+        "C": "Service management",
+        "D": "Service consumption"
+      },
+      "correct_answer": "C",
+      "correct_answer_text": "Service management",
+      "explanation": "Correct answer: C — \"Service management\". This is strongly supported by the ITIL 4 Foundation guidance on p.205 (Chapter 5 – ITIL management practices), which states: \"service management A set of specialized organizational capabilities for enabling value for customers in the form of services.\"",
+      "textbook_references": [
+        {
+          "textbook_page": 205,
+          "chapter": "Chapter 5 – ITIL management practices",
+          "relevance": 1.0,
+          "excerpt": "service management A set of specialized organizational capabilities for enabling value for customers in the form of services."
+        },
+        {
+          "textbook_page": 16,
+          "chapter": "Chapter 2 – Key concepts of service management",
+          "relevance": 0.642,
+          "excerpt": "A set of specialized organizational capabilities for enabling value for customers in the form of services."
+        }
+      ],
+      "top_match_page": 205,
+      "match_confidence": 1.0
+    },
+    {
+      "question_number": 4,
+      "question": "Which gives a user access to a system?",
+      "options": {
+        "A": "Service requirement",
+        "B": "Service agreement",
+        "C": "Service consumption",
+        "D": "Service provision"
+      },
+      "correct_answer": "D",
+      "correct_answer_text": "Service provision",
+      "explanation": "Correct answer: D — \"Service provision\". This is strongly supported by the ITIL 4 Foundation guidance on p.205 (Chapter 5 – ITIL management practices), which states: \"service relationship A cooperation between a service provider and service consumer. Service relationships include service provision, service consumption, and service relationship management.\"",
+      "textbook_references": [
+        {
+          "textbook_page": 205,
+          "chapter": "Chapter 5 – ITIL management practices",
+          "relevance": 0.607,
+          "excerpt": "service relationship A cooperation between a service provider and service consumer. Service relationships include service provision, service consumption, and service relationship management."
+        },
+        {
+          "textbook_page": 205,
+          "chapter": "Chapter 5 – ITIL management practices",
+          "relevance": 0.541,
+          "excerpt": "service provision Activities performed by an organization to provide services. It includes management of the provider’s resources, configured to deliver the service; ensuring access to these resources for users; fulfilment of the agreed service actions; service level management; and continual improvement. It may also include the supply of goods."
+        }
+      ],
+      "top_match_page": 205,
+      "match_confidence": 0.607
+    },
+    {
+      "question_number": 5,
+      "question": "Which statement about managing incidents is CORRECT?",
+      "options": {
+        "A": "Low impact incidents should be resolved efficiently, making logging unnecessary",
+        "B": "The 'incident management' practice should use a single process regardless of the impact of the incident",
+        "C": "Low impact incidents should be resolved efficiently so the resource required is reduced",
+        "D": "Incidents with the lowest impact should be resolved first"
+      },
+      "correct_answer": "C",
+      "correct_answer_text": "Low impact incidents should be resolved efficiently so the resource required is reduced",
+      "explanation": "Correct answer: C — \"Low impact incidents should be resolved efficiently so the resource required is reduced\". This is strongly supported by the ITIL 4 Foundation guidance on p.131 (Chapter 5 – ITIL management practices), which states: \"Incident management can have an enormous impact on customer and user satisfaction, and on how customers and users perceive the service provider. Every incident should be logged and managed to ensure that it is resolved in a time that meets the expectations of the customer and user. Target resolution times are agreed, documented, and communicated to ensure that expectations are realistic. Incidents are prioritized based on an agreed classification to ensure that incidents with the highest business impact are resolved first. Organizations should design their incident management practice to…\"",
+      "textbook_references": [
+        {
+          "textbook_page": 131,
+          "chapter": "Chapter 5 – ITIL management practices",
+          "relevance": 0.233,
+          "excerpt": "Incident management can have an enormous impact on customer and user satisfaction, and on how customers and users perceive the service provider. Every incident should be logged and managed to ensure that it is resolved in a time that meets the expectations of the customer and user. Target resolution times are agreed, documented, and communicated to ensure that expectations are realistic. Incidents are prioritized based on an agreed classification to ensure that incidents with the highest business impact are resolved first. Organizations should design their incident management practice to…"
+        },
+        {
+          "textbook_page": 202,
+          "chapter": "Chapter 5 – ITIL management practices",
+          "relevance": 0.156,
+          "excerpt": "problem management practice The practice of reducing the likelihood and impact of incidents by identifying actual and potential causes of incidents, and managing workarounds and known errors."
+        }
+      ],
+      "top_match_page": 131,
+      "match_confidence": 0.233
+    },
+    {
+      "question_number": 6,
+      "question": "Which statement about the service value chain is CORRECT?",
+      "options": {
+        "A": "The service value chain converts value into demand",
+        "B": "Each value chain activity uses different combinations of practices to convert inputs into outputs",
+        "C": "Each value chain activity identifies a requirement for resources from an external supplier",
+        "D": "The service value chain uses value streams to describe a combination of consumers and providers"
+      },
+      "correct_answer": "B",
+      "correct_answer_text": "Each value chain activity uses different combinations of practices to convert inputs into outputs",
+      "explanation": "Correct answer: B — \"Each value chain activity uses different combinations of practices to convert inputs into outputs\". This is strongly supported by the ITIL 4 Foundation guidance on p.68 (CHAPTER 4), which states: \"To convert inputs into outputs, the value chain activities use different combinations of ITIL practices (sets of resources for performing certain types of work), drawing on internal or third-party resources, processes, skills, and competencies as required. For example, the engage activity might draw on supplier management, service desk management, relationship management, and service request management to respond to new demands for products and services, or information from various stakeholders (see Chapter 5 for more information on practices).\"",
+      "textbook_references": [
+        {
+          "textbook_page": 68,
+          "chapter": "CHAPTER 4",
+          "relevance": 0.34,
+          "excerpt": "To convert inputs into outputs, the value chain activities use different combinations of ITIL practices (sets of resources for performing certain types of work), drawing on internal or third-party resources, processes, skills, and competencies as required. For example, the engage activity might draw on supplier management, service desk management, relationship management, and service request management to respond to new demands for products and services, or information from various stakeholders (see Chapter 5 for more information on practices)."
+        },
+        {
+          "textbook_page": 71,
+          "chapter": "CHAPTER 4",
+          "relevance": 0.233,
+          "excerpt": "The following sections outline the value chain activities and define the purpose, inputs, and outputs for each. As each value stream is made up of a different combination of activities and practices, the inputs and outputs listed will not always apply, as they are specific to particular value streams. For example, the ‘strategic, tactical, and operational plans’ output of the plan value chain activity is formed as a result of strategic, tactical, and operational planning respectively. Each of these levels is likely to involve different resources, have a different planning cycle, and be…"
+        }
+      ],
+      "top_match_page": 68,
+      "match_confidence": 0.34
+    },
+    {
+      "question_number": 7,
+      "question": "What describes how components and activities work together to facilitate value creation?",
+      "options": {
+        "A": "The ITIL service value system",
+        "B": "The ITIL guiding principles",
+        "C": "The four dimensions of service management",
+        "D": "A service relationship"
+      },
+      "correct_answer": "A",
+      "correct_answer_text": "The ITIL service value system",
+      "explanation": "Correct answer: A — \"The ITIL service value system\". This is strongly supported by the ITIL 4 Foundation guidance on p.47 (CHAPTER 4), which states: \"Figure 4.1 The ITIL service value system\"",
+      "textbook_references": [
+        {
+          "textbook_page": 47,
+          "chapter": "CHAPTER 4",
+          "relevance": 1.0,
+          "excerpt": "Figure 4.1 The ITIL service value system"
+        },
+        {
+          "textbook_page": 13,
+          "chapter": "Chapter 1 – Introduction",
+          "relevance": 0.871,
+          "excerpt": "The structure and benefits of the ITIL 4 framework The key components of the ITIL 4 framework are the ITIL service value system (SVS) and the four dimensions model."
+        }
+      ],
+      "top_match_page": 47,
+      "match_confidence": 1.0
+    },
+    {
+      "question_number": 8,
+      "question": "Which practice involves the management of vulnerabilities that were not identified before the service went live?",
+      "options": {
+        "A": "Service request management",
+        "B": "Problem management",
+        "C": "Change control",
+        "D": "Service level management"
+      },
+      "correct_answer": "B",
+      "correct_answer_text": "Problem management",
+      "explanation": "Correct answer: B — \"Problem management\". This is strongly supported by the ITIL 4 Foundation guidance on p.143 (Chapter 5 – ITIL management practices), which states: \"Problem management is usually focused on errors in operational environments. Figure 5.24 shows the contribution of problem management to the service value chain, with the practice being applied mainly to the improve, and deliver and support value chain activities:\"",
+      "textbook_references": [
+        {
+          "textbook_page": 143,
+          "chapter": "Chapter 5 – ITIL management practices",
+          "relevance": 0.625,
+          "excerpt": "Problem management is usually focused on errors in operational environments. Figure 5.24 shows the contribution of problem management to the service value chain, with the practice being applied mainly to the improve, and deliver and support value chain activities:"
+        },
+        {
+          "textbook_page": 141,
+          "chapter": "Chapter 5 – ITIL management practices",
+          "relevance": 0.572,
+          "excerpt": "Figure 5.23 The phases of problem management"
+        }
+      ],
+      "top_match_page": 143,
+      "match_confidence": 0.625
+    },
+    {
+      "question_number": 9,
+      "question": "Which statement about the use of measurement in the 'start where you are' guiding principle is CORRECT?",
+      "options": {
+        "A": "It should always be used to support direct observation",
+        "B": "It should always be used instead of direct observation",
+        "C": "Measured data is always more accurate than direct observation",
+        "D": "The act of measuring always positively impacts results"
+      },
+      "correct_answer": "A",
+      "correct_answer_text": "It should always be used to support direct observation",
+      "explanation": "Correct answer: A — \"It should always be used to support direct observation\". This is strongly supported by the ITIL 4 Foundation guidance on p.56 (CHAPTER 4), which states: \"4.3.2.2 The role of measurement The use of measurement is important to this principle. It should, however, support but not replace what is observed, as over-reliance on data analytics and reporting can unintentionally introduce biases and risks in decision-making. Organizations should consider a variety of techniques to develop knowledge of the environments in which they work. Although it is true that some things can only be understood through measuring their effect (for example, natural phenomena such as the wind), direct observation should always be the preferred option. Too often existing…\"",
+      "textbook_references": [
+        {
+          "textbook_page": 56,
+          "chapter": "CHAPTER 4",
+          "relevance": 0.24,
+          "excerpt": "4.3.2.2 The role of measurement The use of measurement is important to this principle. It should, however, support but not replace what is observed, as over-reliance on data analytics and reporting can unintentionally introduce biases and risks in decision-making. Organizations should consider a variety of techniques to develop knowledge of the environments in which they work. Although it is true that some things can only be understood through measuring their effect (for example, natural phenomena such as the wind), direct observation should always be the preferred option. Too often existing…"
+        },
+        {
+          "textbook_page": 49,
+          "chapter": "CHAPTER 4",
+          "relevance": 0.138,
+          "excerpt": "A guiding principle is a recommendation that guides an organization in all circumstances, regardless of changes in its goals, strategies, type of work, or management structure. A guiding principle is universal and enduring."
+        }
+      ],
+      "top_match_page": 56,
+      "match_confidence": 0.24
+    },
+    {
+      "question_number": 10,
+      "question": "Which ITIL practice recommends performing service reviews to ensure that services continue to meet the needs of the organization?",
+      "options": {
+        "A": "Service desk",
+        "B": "Service request management",
+        "C": "Service level management",
+        "D": "Service configuration management"
+      },
+      "correct_answer": "C",
+      "correct_answer_text": "Service level management",
+      "explanation": "Correct answer: C — \"Service level management\". This is strongly supported by the ITIL 4 Foundation guidance on p.162 (Chapter 5 – ITIL management practices), which states: \"Service level management provides the end-to-end visibility of the organization’s services. To achieve this, service level management: ●● establishes a shared view of the services and target service levels with customers ●● ensures the organization meets the defined service levels through the collection, analysis, storage, and reporting of the relevant metrics for the identified services ●● performs service reviews to ensure that the current set of services continues to meet the needs of the organization and its customers ●● captures and reports on service issues, including performance…\"",
+      "textbook_references": [
+        {
+          "textbook_page": 162,
+          "chapter": "Chapter 5 – ITIL management practices",
+          "relevance": 0.855,
+          "excerpt": "Service level management provides the end-to-end visibility of the organization’s services. To achieve this, service level management: ●● establishes a shared view of the services and target service levels with customers ●● ensures the organization meets the defined service levels through the collection, analysis, storage, and reporting of the relevant metrics for the identified services ●● performs service reviews to ensure that the current set of services continues to meet the needs of the organization and its customers ●● captures and reports on service issues, including performance…"
+        },
+        {
+          "textbook_page": 165,
+          "chapter": "Chapter 5 – ITIL management practices",
+          "relevance": 0.588,
+          "excerpt": "Figure 5.34 Heat map of the contribution of service level management to value chain activities"
+        }
+      ],
+      "top_match_page": 162,
+      "match_confidence": 0.855
+    },
+    {
+      "question_number": 11,
+      "question": "What should be considered as part of the 'partners and suppliers' dimension?",
+      "options": {
+        "A": "The level of integration and formality involved in the relationships between organizations",
+        "B": "The activities, workflows, controls and procedures needed to achieve the agreed objectives",
+        "C": "The information created, managed and used in the course of service provision and consumption",
+        "D": "The required skills and competencies of teams and individual members of the organization"
+      },
+      "correct_answer": "A",
+      "correct_answer_text": "The level of integration and formality involved in the relationships between organizations",
+      "explanation": "Correct answer: A — \"The level of integration and formality involved in the relationships between organizations\". This is strongly supported by the ITIL 4 Foundation guidance on p.40 (Chapter 3 – The four dimensions of service management), which states: \"The partners and suppliers dimension encompasses an organization’s relationships with other organizations that are involved in the design, development, deployment, delivery, support, and/or continual improvement of services. It also incorporates contracts and other agreements between the organization and its partners or suppliers.\"",
+      "textbook_references": [
+        {
+          "textbook_page": 40,
+          "chapter": "Chapter 3 – The four dimensions of service management",
+          "relevance": 0.2,
+          "excerpt": "The partners and suppliers dimension encompasses an organization’s relationships with other organizations that are involved in the design, development, deployment, delivery, support, and/or continual improvement of services. It also incorporates contracts and other agreements between the organization and its partners or suppliers."
+        },
+        {
+          "textbook_page": 40,
+          "chapter": "Chapter 3 – The four dimensions of service management",
+          "relevance": 0.197,
+          "excerpt": "Relationships between organizations may involve various levels of integration and formality. This ranges from formal contracts with clear separation of responsibilities, to flexible partnerships where parties share common goals and risks, and collaborate to achieve desired outcomes. Some relationship examples are shown in Table 3.1. Note that the forms of cooperation described are not fixed but exist as a spectrum. An organization acting as a service provider will have a position on this spectrum, which will vary depending on its strategy and objectives for customer relationships. Likewise,…"
+        }
+      ],
+      "top_match_page": 40,
+      "match_confidence": 0.2
+    },
+    {
+      "question_number": 12,
+      "question": "Which practice makes new services available for use?",
+      "options": {
+        "A": "Change enablement",
+        "B": "Release management",
+        "C": "Deployment management",
+        "D": "IT asset management"
+      },
+      "correct_answer": "B",
+      "correct_answer_text": "Release management",
+      "explanation": "Correct answer: B — \"Release management\". This is strongly supported by the ITIL 4 Foundation guidance on p.203 (Chapter 5 – ITIL management practices), which states: \"release management practice The practice of making new and changed services and features available for use.\"",
+      "textbook_references": [
+        {
+          "textbook_page": 203,
+          "chapter": "Chapter 5 – ITIL management practices",
+          "relevance": 0.595,
+          "excerpt": "release management practice The practice of making new and changed services and features available for use."
+        },
+        {
+          "textbook_page": 144,
+          "chapter": "Chapter 5 – ITIL management practices",
+          "relevance": 0.557,
+          "excerpt": "The purpose of the release management practice is to make new and changed services and features available for use."
+        }
+      ],
+      "top_match_page": 203,
+      "match_confidence": 0.595
+    },
+    {
+      "question_number": 13,
+      "question": "Which activity contributes to the 'where are we now?' step of the 'continual improvement' model?",
+      "options": {
+        "A": "Executing improvement actions",
+        "B": "Performing baseline assessments",
+        "C": "Defining the improvement plan",
+        "D": "Understanding the business mission"
+      },
+      "correct_answer": "B",
+      "correct_answer_text": "Performing baseline assessments",
+      "explanation": "Correct answer: B — \"Performing baseline assessments\". This is supported by the ITIL 4 Foundation guidance on p.77 (CHAPTER 4), which states: \"4.6.1 Steps of the continual improvement model This section provides more detail on each step of the continual improvement model. An organization can adjust these steps to its culture and goals. The model is simple and flexible, and can just as easily be used in an Agile culture as in a more traditional waterfall culture.\"",
+      "textbook_references": [
+        {
+          "textbook_page": 77,
+          "chapter": "CHAPTER 4",
+          "relevance": 0.135,
+          "excerpt": "4.6.1 Steps of the continual improvement model This section provides more detail on each step of the continual improvement model. An organization can adjust these steps to its culture and goals. The model is simple and flexible, and can just as easily be used in an Agile culture as in a more traditional waterfall culture."
+        },
+        {
+          "textbook_page": 77,
+          "chapter": "CHAPTER 4",
+          "relevance": 0.114,
+          "excerpt": "Each improvement initiative should support the organization’s goals and objectives. The first step of the continual improvement model is to define the vision of the initiative. This provides context for all subsequent decisions and links individual actions to the organization’s vision for the future."
+        }
+      ],
+      "top_match_page": 77,
+      "match_confidence": 0.135
+    },
+    {
+      "question_number": 14,
+      "question": "Which guiding principle considers the importance of customer loyalty?",
+      "options": {
+        "A": "Progress iteratively with feedback",
+        "B": "Focus on value",
+        "C": "Optimize and automate",
+        "D": "Start where you are"
+      },
+      "correct_answer": "B",
+      "correct_answer_text": "Focus on value",
+      "explanation": "Correct answer: B — \"Focus on value\". This is strongly supported by the ITIL 4 Foundation guidance on p.49 (CHAPTER 4), which states: \"Table 4.1 Overview of the guiding principles Guiding principle Description Focus on value Everything that the organization does needs to map, directly or indirectly, to value for the stakeholders. The focus on value principle encompasses many perspectives, including the experience of customers and users. Start where you are Do not start from scratch and build something new without considering what is already available to be leveraged. There is likely to be a great deal in the current services, processes, programmes, projects, and people that can be used to create the desired outcome. The…\"",
+      "textbook_references": [
+        {
+          "textbook_page": 49,
+          "chapter": "CHAPTER 4",
+          "relevance": 0.548,
+          "excerpt": "Table 4.1 Overview of the guiding principles Guiding principle Description Focus on value Everything that the organization does needs to map, directly or indirectly, to value for the stakeholders. The focus on value principle encompasses many perspectives, including the experience of customers and users. Start where you are Do not start from scratch and build something new without considering what is already available to be leveraged. There is likely to be a great deal in the current services, processes, programmes, projects, and people that can be used to create the desired outcome. The…"
+        },
+        {
+          "textbook_page": 215,
+          "chapter": "Chapter 5 – ITIL management practices",
+          "relevance": 0.467,
+          "excerpt": "Index focus on value (guiding principle) 39, 41–44 iterative progression 47–48, 70 four dimensions model 4, 25 ITIL applicability of dimensions 24 Agile methods and 40 failure to address 24 cloud computing and 164–165 information 26–27 continual improvement 73 organizations 25–26 DevOps methods and 41 partners and suppliers 30–31 guiding principles 4, 39–56, 73 people 26 ITIL 4 framework 3–4 technology 27–30 management practices see management practices practices 3 G service management see service management gap analysis 69 service value chain 3 general management practices architecture…"
+        }
+      ],
+      "top_match_page": 49,
+      "match_confidence": 0.548
+    },
+    {
+      "question_number": 15,
+      "question": "Which is a recommendation of the guiding principle 'think and work holistically'?",
+      "options": {
+        "A": "Conduct a review of existing service management practices and decide what to keep and what to discard",
+        "B": "Review how an improvement initiative can be organized into smaller, manageable sections that can be completed in a timely manner",
+        "C": "Review service management practices and remove any unnecessary complexity",
+        "D": "Use the four dimensions of service management to ensure coordination of all aspects of an improvement initiative"
+      },
+      "correct_answer": "D",
+      "correct_answer_text": "Use the four dimensions of service management to ensure coordination of all aspects of an improvement initiative",
+      "explanation": "Correct answer: D — \"Use the four dimensions of service management to ensure coordination of all aspects of an improvement initiative\". This is strongly supported by the ITIL 4 Foundation guidance on p.43 (Chapter 3 – The four dimensions of service management), which states: \"The four dimensions of service management\"",
+      "textbook_references": [
+        {
+          "textbook_page": 43,
+          "chapter": "Chapter 3 – The four dimensions of service management",
+          "relevance": 0.324,
+          "excerpt": "The four dimensions of service management"
+        },
+        {
+          "textbook_page": 41,
+          "chapter": "Chapter 3 – The four dimensions of service management",
+          "relevance": 0.324,
+          "excerpt": "The four dimensions of service management"
+        }
+      ],
+      "top_match_page": 43,
+      "match_confidence": 0.324
+    },
+    {
+      "question_number": 16,
+      "question": "Which statement about 'continual improvement' is CORRECT?",
+      "options": {
+        "A": "All improvement ideas should be logged in a single 'continual improvement register'",
+        "B": "A single team should carry out 'continual improvement' across the organization",
+        "C": "'Continual improvement' should have minimal interaction with other practices",
+        "D": "Everyone in the organization is responsible for some aspects of 'continual improvement'"
+      },
+      "correct_answer": "D",
+      "correct_answer_text": "Everyone in the organization is responsible for some aspects of 'continual improvement'",
+      "explanation": "Correct answer: D — \"Everyone in the organization is responsible for some aspects of 'continual improvement'\". This is supported by the ITIL 4 Foundation guidance on p.117 (Chapter 5 – ITIL management practices), which states: \"5.1.13.4 Service integration Service integration is responsible for coordinating or orchestrating all the suppliers involved in the development and delivery of products and services. It focuses on the end-to-end provision of service, ensuring control of all interfaces and outcomes from suppliers, and facilitating collaboration between suppliers. An organization can either perform the role of service integrator itself, or use a third-party service integrator. It is possible to develop a hybrid model, where the organization is responsible for some of the service integration function and…\"",
+      "textbook_references": [
+        {
+          "textbook_page": 117,
+          "chapter": "Chapter 5 – ITIL management practices",
+          "relevance": 0.101,
+          "excerpt": "5.1.13.4 Service integration Service integration is responsible for coordinating or orchestrating all the suppliers involved in the development and delivery of products and services. It focuses on the end-to-end provision of service, ensuring control of all interfaces and outcomes from suppliers, and facilitating collaboration between suppliers. An organization can either perform the role of service integrator itself, or use a third-party service integrator. It is possible to develop a hybrid model, where the organization is responsible for some of the service integration function and…"
+        },
+        {
+          "textbook_page": 157,
+          "chapter": "Chapter 5 – ITIL management practices",
+          "relevance": 0.088,
+          "excerpt": "Not every change to a product or service will require the same level of service design activity. Every change, no matter how small, will need some degree of design work, but the scale of the activity necessary to ensure success will vary greatly from one change type to another. Organizations must define what level of design activity is required for each category of change, and ensure that everyone within the organization is clear on these criteria. Service design supports products and services that: ●● are business- and customer-oriented, focused, and driven ●● are cost-effective ●● meet the…"
+        }
+      ],
+      "top_match_page": 117,
+      "match_confidence": 0.101
+    },
+    {
+      "question_number": 17,
+      "question": "What impact does automation have on a service desk?",
+      "options": {
+        "A": "Less low level work and a greater ability to focus on user experience",
+        "B": "Increased phone contact and a reduced ability to focus on user experience",
+        "C": "Ability to work from multiple locations, geographically dispersed",
+        "D": "Ability to work from a single centralized location"
+      },
+      "correct_answer": "A",
+      "correct_answer_text": "Less low level work and a greater ability to focus on user experience",
+      "explanation": "Correct answer: A — \"Less low level work and a greater ability to focus on user experience\". This is strongly supported by the ITIL 4 Foundation guidance on p.160 (Chapter 5 – ITIL management practices), which states: \"The service desk may not need to be highly technical, although some are. However, even if the service desk is fairly simple, it still plays a vital role in the delivery of services, and must be actively supported by its peer groups. It is also essential to understand that the service desk has a major influence on user experience and how the service provider is perceived by the users. Another key aspect of a good service desk is its practical understanding of the wider business context, the business processes, and the users. Service desks add value not simply through the transactional acts of,…\"",
+      "textbook_references": [
+        {
+          "textbook_page": 160,
+          "chapter": "Chapter 5 – ITIL management practices",
+          "relevance": 0.236,
+          "excerpt": "The service desk may not need to be highly technical, although some are. However, even if the service desk is fairly simple, it still plays a vital role in the delivery of services, and must be actively supported by its peer groups. It is also essential to understand that the service desk has a major influence on user experience and how the service provider is perceived by the users. Another key aspect of a good service desk is its practical understanding of the wider business context, the business processes, and the users. Service desks add value not simply through the transactional acts of,…"
+        },
+        {
+          "textbook_page": 158,
+          "chapter": "Chapter 5 – ITIL management practices",
+          "relevance": 0.159,
+          "excerpt": "Lean user experience Lean user experience (Lean UX) design is a mindset, a culture, and a process that embraces Lean–Agile"
+        }
+      ],
+      "top_match_page": 160,
+      "match_confidence": 0.236
+    },
+    {
+      "question_number": 18,
+      "question": "Identify the missing word(s) in the following sentence: The service desk should be the entry point and single point of contact for the [?] with all of its users.",
+      "options": {
+        "A": "Service consumer",
+        "B": "Service provider",
+        "C": "Customer",
+        "D": "Supplier"
+      },
+      "correct_answer": "B",
+      "correct_answer_text": "Service provider",
+      "explanation": "Correct answer: B — \"Service provider\". This is strongly supported by the ITIL 4 Foundation guidance on p.159 (Chapter 5 – ITIL management practices), which states: \"The purpose of the service desk practice is to capture demand for incident resolution and service requests. It should also be the entry point and single point of contact for the service provider with all of its users.\"",
+      "textbook_references": [
+        {
+          "textbook_page": 159,
+          "chapter": "Chapter 5 – ITIL management practices",
+          "relevance": 1.0,
+          "excerpt": "The purpose of the service desk practice is to capture demand for incident resolution and service requests. It should also be the entry point and single point of contact for the service provider with all of its users."
+        },
+        {
+          "textbook_page": 204,
+          "chapter": "Chapter 5 – ITIL management practices",
+          "relevance": 0.682,
+          "excerpt": "service desk The point of communication between the service provider and all its users."
+        }
+      ],
+      "top_match_page": 159,
+      "match_confidence": 1.0
+    },
+    {
+      "question_number": 19,
+      "question": "What aspect of 'service level management' asks service consumers what their work involves and how technology helps them?",
+      "options": {
+        "A": "Customer engagement",
+        "B": "Operational metrics",
+        "C": "Business metrics",
+        "D": "Customer feedback"
+      },
+      "correct_answer": "A",
+      "correct_answer_text": "Customer engagement",
+      "explanation": "Correct answer: A — \"Customer engagement\". This is strongly supported by the ITIL 4 Foundation guidance on p.164 (Chapter 5 – ITIL management practices), which states: \"Service level management involves collating and analysing information from a number of sources, including: ●● Customer engagement This involves initial listening, discovery, and information capture on which to base metrics, measurement, and ongoing progress discussions. Consider asking customers some simple open questions such as: ●● What does your work involve? ●● How does technology help you? ●● What are your key business times, areas, people, and activities? ●● What differentiates a good day from a bad day for you? ●● Which of these activities is most important to you? ●● What are your…\"",
+      "textbook_references": [
+        {
+          "textbook_page": 164,
+          "chapter": "Chapter 5 – ITIL management practices",
+          "relevance": 0.469,
+          "excerpt": "Service level management involves collating and analysing information from a number of sources, including: ●● Customer engagement This involves initial listening, discovery, and information capture on which to base metrics, measurement, and ongoing progress discussions. Consider asking customers some simple open questions such as: ●● What does your work involve? ●● How does technology help you? ●● What are your key business times, areas, people, and activities? ●● What differentiates a good day from a bad day for you? ●● Which of these activities is most important to you? ●● What are your…"
+        },
+        {
+          "textbook_page": 215,
+          "chapter": "Chapter 5 – ITIL management practices",
+          "relevance": 0.291,
+          "excerpt": "cooperation 49–51 portfolio management 91–94 costs, value and 17, 18 project management 94–95 critical success factors (CSFs) 69, 87–88 relationship management 96, 97 current state risk management 97–99 assessment 68–69 service financial management 100–102 starting with 44–46 strategy management 103–105 supplier management 105–108 customer engagement 154 workforce and talent management 109–111 customer experience 43, 146, 148 workforce and talent management see workforce and talent management customer feedback 154 governance 56–57 customer portfolios 92 guiding principles, ITIL 3, 4, 39–56, 73 customers, co-creation of value with 8–9 H D high-velocity service…"
+        }
+      ],
+      "top_match_page": 164,
+      "match_confidence": 0.469
+    },
+    {
+      "question_number": 20,
+      "question": "Which is a result of applying the guiding principle 'progress iteratively with feedback'?",
+      "options": {
+        "A": "The ability to discover and respond to failure earlier",
+        "B": "Standardization of practices and services",
+        "C": "Understanding the customer's perception of value",
+        "D": "Understanding the current state and identifying what can be reused"
+      },
+      "correct_answer": "A",
+      "correct_answer_text": "The ability to discover and respond to failure earlier",
+      "explanation": "Correct answer: A — \"The ability to discover and respond to failure earlier\". This is strongly supported by the ITIL 4 Foundation guidance on p.58 (CHAPTER 4), which states: \"4.3.3.2 Iteration and feedback together Working in a timeboxed, iterative manner with feedback loops embedded into the process allows for: ●● greater flexibility ●● faster responses to customer and business needs ●● the ability to discover and respond to failure earlier ●● an overall improvement in quality.\"",
+      "textbook_references": [
+        {
+          "textbook_page": 58,
+          "chapter": "CHAPTER 4",
+          "relevance": 0.385,
+          "excerpt": "4.3.3.2 Iteration and feedback together Working in a timeboxed, iterative manner with feedback loops embedded into the process allows for: ●● greater flexibility ●● faster responses to customer and business needs ●● the ability to discover and respond to failure earlier ●● an overall improvement in quality."
+        },
+        {
+          "textbook_page": 57,
+          "chapter": "CHAPTER 4",
+          "relevance": 0.141,
+          "excerpt": "4.3.3 Progress iteratively with feedback"
+        }
+      ],
+      "top_match_page": 58,
+      "match_confidence": 0.385
+    }
+  ]
+}

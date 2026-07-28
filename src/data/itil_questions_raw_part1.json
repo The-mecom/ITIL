@@ -1,0 +1,1044 @@
+{
+  "questions": [
+    {
+      "question_number": 1,
+      "question": "How are target resolution times used in the 'incident management' practice?",
+      "options": {
+        "A": "They are agreed, documented, and communicated to help set user expectations",
+        "B": "They are established, reviewed, and reported to ensure that customers are happy with the service",
+        "C": "They are initiated, approved, and managed to ensure that predictable responses are achieved",
+        "D": "They are scheduled, assessed and authorized to reduce the risk of service failures"
+      },
+      "correct_answer": "A",
+      "explanation": "Correct answer: A — \"They are agreed, documented, and communicated to help set user expectations\". This is strongly supported by the ITIL 4 Foundation guidance on p.131 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 2,
+      "question": "Why should some service requests be fulfilled with no additional approvals?",
+      "options": {
+        "A": "To ensure that spending is properly accounted for",
+        "B": "To ensure that information security requirements are met",
+        "C": "To streamline the fulfilment workflow",
+        "D": "To set user expectations for fulfilment times"
+      },
+      "correct_answer": "C",
+      "explanation": "Correct answer: C — \"To streamline the fulfilment workflow\". This is strongly supported by the ITIL 4 Foundation guidance on p.166 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 3,
+      "question": "What is a set of specialized organizational capabilities for enabling value for customers in the form of services?",
+      "options": {
+        "A": "Service offering",
+        "B": "Service provision",
+        "C": "Service management",
+        "D": "Service consumption"
+      },
+      "correct_answer": "C",
+      "explanation": "Correct answer: C — \"Service management\". This is strongly supported by the ITIL 4 Foundation guidance on p.205 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 4,
+      "question": "Which gives a user access to a system?",
+      "options": {
+        "A": "Service requirement",
+        "B": "Service agreement",
+        "C": "Service consumption",
+        "D": "Service provision"
+      },
+      "correct_answer": "D",
+      "explanation": "Correct answer: D — \"Service provision\". This is strongly supported by the ITIL 4 Foundation guidance on p.205 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 5,
+      "question": "Which statement about managing incidents is CORRECT?",
+      "options": {
+        "A": "Low impact incidents should be resolved efficiently, making logging unnecessary",
+        "B": "The 'incident management' practice should use a single process regardless of the impact of the incident",
+        "C": "Low impact incidents should be resolved efficiently so the resource required is reduced",
+        "D": "Incidents with the lowest impact should be resolved first"
+      },
+      "correct_answer": "C",
+      "explanation": "Correct answer: C — \"Low impact incidents should be resolved efficiently so the resource required is reduced\". This is strongly supported by the ITIL 4 Foundation guidance on p.131 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 6,
+      "question": "Which statement about the service value chain is CORRECT?",
+      "options": {
+        "A": "The service value chain converts value into demand",
+        "B": "Each value chain activity uses different combinations of practices to convert inputs into outputs",
+        "C": "Each value chain activity identifies a requirement for resources from an external supplier",
+        "D": "The service value chain uses value streams to describe a combination of consumers and providers"
+      },
+      "correct_answer": "B",
+      "explanation": "Correct answer: B — \"Each value chain activity uses different combinations of practices to convert inputs into outputs\". This is strongly supported by the ITIL 4 Foundation guidance on p.68 (CHAPTER 4).",
+      "textbook_references": [{ "chapter": "CHAPTER 4" }]
+    },
+    {
+      "question_number": 7,
+      "question": "What describes how components and activities work together to facilitate value creation?",
+      "options": {
+        "A": "The ITIL service value system",
+        "B": "The ITIL guiding principles",
+        "C": "The four dimensions of service management",
+        "D": "A service relationship"
+      },
+      "correct_answer": "A",
+      "explanation": "Correct answer: A — \"The ITIL service value system\". This is strongly supported by the ITIL 4 Foundation guidance on p.47 (CHAPTER 4).",
+      "textbook_references": [{ "chapter": "CHAPTER 4" }]
+    },
+    {
+      "question_number": 8,
+      "question": "Which practice involves the management of vulnerabilities that were not identified before the service went live?",
+      "options": {
+        "A": "Service request management",
+        "B": "Problem management",
+        "C": "Change control",
+        "D": "Service level management"
+      },
+      "correct_answer": "B",
+      "explanation": "Correct answer: B — \"Problem management\". This is strongly supported by the ITIL 4 Foundation guidance on p.143 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 9,
+      "question": "Which statement about the use of measurement in the 'start where you are' guiding principle is CORRECT?",
+      "options": {
+        "A": "It should always be used to support direct observation",
+        "B": "It should always be used instead of direct observation",
+        "C": "Measured data is always more accurate than direct observation",
+        "D": "The act of measuring always positively impacts results"
+      },
+      "correct_answer": "A",
+      "explanation": "Correct answer: A — \"It should always be used to support direct observation\". This is strongly supported by the ITIL 4 Foundation guidance on p.56 (CHAPTER 4).",
+      "textbook_references": [{ "chapter": "CHAPTER 4" }]
+    },
+    {
+      "question_number": 10,
+      "question": "Which ITIL practice recommends performing service reviews to ensure that services continue to meet the needs of the organization?",
+      "options": {
+        "A": "Service desk",
+        "B": "Service request management",
+        "C": "Service level management",
+        "D": "Service configuration management"
+      },
+      "correct_answer": "C",
+      "explanation": "Correct answer: C — \"Service level management\". This is strongly supported by the ITIL 4 Foundation guidance on p.162 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 11,
+      "question": "What should be considered as part of the 'partners and suppliers' dimension?",
+      "options": {
+        "A": "The level of integration and formality involved in the relationships between organizations",
+        "B": "The activities, workflows, controls and procedures needed to achieve the agreed objectives",
+        "C": "The information created, managed and used in the course of service provision and consumption",
+        "D": "The required skills and competencies of teams and individual members of the organization"
+      },
+      "correct_answer": "A",
+      "explanation": "Correct answer: A — \"The level of integration and formality involved in the relationships between organizations\". This is strongly supported by the ITIL 4 Foundation guidance on p.40 (Chapter 3 – The four dimensions of service management).",
+      "textbook_references": [{ "chapter": "Chapter 3 – The four dimensions of service management" }]
+    },
+    {
+      "question_number": 12,
+      "question": "Which practice makes new services available for use?",
+      "options": {
+        "A": "Change enablement",
+        "B": "Release management",
+        "C": "Deployment management",
+        "D": "IT asset management"
+      },
+      "correct_answer": "B",
+      "explanation": "Correct answer: B — \"Release management\". This is strongly supported by the ITIL 4 Foundation guidance on p.203 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 13,
+      "question": "Which activity contributes to the 'where are we now?' step of the 'continual improvement' model?",
+      "options": {
+        "A": "Executing improvement actions",
+        "B": "Performing baseline assessments",
+        "C": "Defining the improvement plan",
+        "D": "Understanding the business mission"
+      },
+      "correct_answer": "B",
+      "explanation": "Correct answer: B — \"Performing baseline assessments\". This is supported by the ITIL 4 Foundation guidance on p.77 (CHAPTER 4).",
+      "textbook_references": [{ "chapter": "CHAPTER 4" }]
+    },
+    {
+      "question_number": 14,
+      "question": "Which guiding principle considers the importance of customer loyalty?",
+      "options": {
+        "A": "Progress iteratively with feedback",
+        "B": "Focus on value",
+        "C": "Optimize and automate",
+        "D": "Start where you are"
+      },
+      "correct_answer": "B",
+      "explanation": "Correct answer: B — \"Focus on value\". This is strongly supported by the ITIL 4 Foundation guidance on p.49 (CHAPTER 4).",
+      "textbook_references": [{ "chapter": "CHAPTER 4" }]
+    },
+    {
+      "question_number": 15,
+      "question": "Which is a recommendation of the guiding principle 'think and work holistically'?",
+      "options": {
+        "A": "Conduct a review of existing service management practices and decide what to keep and what to discard",
+        "B": "Review how an improvement initiative can be organized into smaller, manageable sections that can be completed in a timely manner",
+        "C": "Review service management practices and remove any unnecessary complexity",
+        "D": "Use the four dimensions of service management to ensure coordination of all aspects of an improvement initiative"
+      },
+      "correct_answer": "D",
+      "explanation": "Correct answer: D — \"Use the four dimensions of service management to ensure coordination of all aspects of an improvement initiative\". This is strongly supported by the ITIL 4 Foundation guidance on p.43 (Chapter 3 – The four dimensions of service management).",
+      "textbook_references": [{ "chapter": "Chapter 3 – The four dimensions of service management" }]
+    },
+    {
+      "question_number": 16,
+      "question": "Which statement about 'continual improvement' is CORRECT?",
+      "options": {
+        "A": "All improvement ideas should be logged in a single 'continual improvement register'",
+        "B": "A single team should carry out 'continual improvement' across the organization",
+        "C": "'Continual improvement' should have minimal interaction with other practices",
+        "D": "Everyone in the organization is responsible for some aspects of 'continual improvement'"
+      },
+      "correct_answer": "D",
+      "explanation": "Correct answer: D — \"Everyone in the organization is responsible for some aspects of 'continual improvement'\". This is supported by the ITIL 4 Foundation guidance on p.117 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 17,
+      "question": "What impact does automation have on a service desk?",
+      "options": {
+        "A": "Less low level work and a greater ability to focus on user experience",
+        "B": "Increased phone contact and a reduced ability to focus on user experience",
+        "C": "Ability to work from multiple locations, geographically dispersed",
+        "D": "Ability to work from a single centralized location"
+      },
+      "correct_answer": "A",
+      "explanation": "Correct answer: A — \"Less low level work and a greater ability to focus on user experience\". This is strongly supported by the ITIL 4 Foundation guidance on p.160 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 18,
+      "question": "Identify the missing word(s) in the following sentence: The service desk should be the entry point and single point of contact for the [?] with all of its users.",
+      "options": {
+        "A": "Service consumer",
+        "B": "Service provider",
+        "C": "Customer",
+        "D": "Supplier"
+      },
+      "correct_answer": "B",
+      "explanation": "Correct answer: B — \"Service provider\". This is strongly supported by the ITIL 4 Foundation guidance on p.159 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 19,
+      "question": "What aspect of 'service level management' asks service consumers what their work involves and how technology helps them?",
+      "options": {
+        "A": "Customer engagement",
+        "B": "Operational metrics",
+        "C": "Business metrics",
+        "D": "Customer feedback"
+      },
+      "correct_answer": "A",
+      "explanation": "Correct answer: A — \"Customer engagement\". This is strongly supported by the ITIL 4 Foundation guidance on p.164 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 20,
+      "question": "Which is a result of applying the guiding principle 'progress iteratively with feedback'?",
+      "options": {
+        "A": "The ability to discover and respond to failure earlier",
+        "B": "Standardization of practices and services",
+        "C": "Understanding the customer's perception of value",
+        "D": "Understanding the current state and identifying what can be reused"
+      },
+      "correct_answer": "A",
+      "explanation": "Correct answer: A — \"The ability to discover and respond to failure earlier\". This is strongly supported by the ITIL 4 Foundation guidance on p.58 (CHAPTER 4).",
+      "textbook_references": [{ "chapter": "CHAPTER 4" }]
+    },
+    {
+      "question_number": 21,
+      "question": "What can be used to determine if a service is 'fit for purpose'?",
+      "options": {
+        "A": "Availability",
+        "B": "Warranty",
+        "C": "Outcome",
+        "D": "Utility"
+      },
+      "correct_answer": "D",
+      "explanation": "Correct answer: D — \"Utility\". This is strongly supported by the ITIL 4 Foundation guidance on p.207 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 22,
+      "question": "In service relationships, what is a benefit of identifying consumer roles?",
+      "options": {
+        "A": "It enables effective stakeholder management",
+        "B": "It provides shared service expectations",
+        "C": "It removes constraints from the customer",
+        "D": "It enables a common definition of value"
+      },
+      "correct_answer": "A",
+      "explanation": "Correct answer: A — \"It enables effective stakeholder management\". This is strongly supported by the ITIL 4 Foundation guidance on p.21 (Chapter 2 – Key concepts of service management).",
+      "textbook_references": [{ "chapter": "Chapter 2 – Key concepts of service management" }]
+    },
+    {
+      "question_number": 23,
+      "question": "Which is an external input to the service value chain?",
+      "options": {
+        "A": "The 'improve' value chain activity",
+        "B": "An overall plan",
+        "C": "Customer requirements",
+        "D": "Feedback loops"
+      },
+      "correct_answer": "C",
+      "explanation": "Correct answer: C — \"Customer requirements\". This is strongly supported by the ITIL 4 Foundation guidance on p.55 (CHAPTER 4).",
+      "textbook_references": [{ "chapter": "CHAPTER 4" }]
+    },
+    {
+      "question_number": 24,
+      "question": "What term is used to describe whether a service will meet availability, capacity and security requirements?",
+      "options": {
+        "A": "Outcomes",
+        "B": "Value",
+        "C": "Utility",
+        "D": "Warranty"
+      },
+      "correct_answer": "D",
+      "explanation": "Correct answer: D — \"Warranty\". This is strongly supported by the ITIL 4 Foundation guidance on p.208 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 25,
+      "question": "What is the purpose of the 'incident management' practice?",
+      "options": {
+        "A": "To minimize the negative impact of incidents by restoring normal service operation as quickly as possible",
+        "B": "To capture demand for incident resolution and service requests",
+        "C": "To reduce the likelihood and impact of incidents by identifying actual and potential causes of incidents",
+        "D": "To support the agreed service quality by effective handling of all agreed user-initiated service requests"
+      },
+      "correct_answer": "A",
+      "explanation": "Correct answer: A — \"To minimize the negative impact of incidents by restoring normal service operation as quickly as possible\". This is strongly supported by the ITIL 4 Foundation guidance on p.131 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 26,
+      "question": "What is defined as an unplanned interruption or reduction in the quality of a service?",
+      "options": {
+        "A": "An incident",
+        "B": "A problem",
+        "C": "A change",
+        "D": "An event"
+      },
+      "correct_answer": "A",
+      "explanation": "Correct answer: A — \"An incident\". This is strongly supported by the ITIL 4 Foundation guidance on p.131 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 27,
+      "question": "Which ITIL practice has the purpose to establish and nurture the links between the organization and its stakeholders at strategic and tactical levels?",
+      "options": {
+        "A": "Supplier management",
+        "B": "Change control",
+        "C": "Relationship management",
+        "D": "Service desk"
+      },
+      "correct_answer": "C",
+      "explanation": "Correct answer: C — \"Relationship management\". This is strongly supported by the ITIL 4 Foundation guidance on p.106 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 28,
+      "question": "What can help to reduce resistance to a planned improvement when applying the guiding principle 'collaborate and promote visibility'?",
+      "options": {
+        "A": "Restricting information about the improvement to essential stakeholders only",
+        "B": "Increasing collaboration and visibility for the improvement",
+        "C": "Involving customers after all planning has been completed",
+        "D": "Engaging every stakeholder group in the same way, with the same communication"
+      },
+      "correct_answer": "C",
+      "explanation": "Correct answer: C — \"Involving customers after all planning has been completed\". This is strongly supported by the ITIL 4 Foundation guidance on p.59 (CHAPTER 4).",
+      "textbook_references": [{ "chapter": "CHAPTER 4" }]
+    },
+    {
+      "question_number": 29,
+      "question": "What varies in size and complexity, and uses functions to achieve its objectives?",
+      "options": {
+        "A": "A risk",
+        "B": "An organization",
+        "C": "A practice",
+        "D": "An outcome"
+      },
+      "correct_answer": "B",
+      "explanation": "Correct answer: B — \"An organization\". This is strongly supported by the ITIL 4 Foundation guidance on p.19 (Chapter 2 – Key concepts of service management).",
+      "textbook_references": [{ "chapter": "Chapter 2 – Key concepts of service management" }]
+    },
+    {
+      "question_number": 30,
+      "question": "Which practice ensures that any addition, modification, or removal of anything that could have an effect on services is assessed and authorized?",
+      "options": {
+        "A": "Deployment management",
+        "B": "Release management",
+        "C": "Change control",
+        "D": "Service configuration management"
+      },
+      "correct_answer": "C",
+      "explanation": "Correct answer: C — \"Change control\". This is strongly supported by the ITIL 4 Foundation guidance on p.129 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 31,
+      "question": "Which practice has a purpose that includes managing risks to confidentiality, integrity and availability?",
+      "options": {
+        "A": "Information security management",
+        "B": "Continual improvement",
+        "C": "Monitoring and event management",
+        "D": "Service level management"
+      },
+      "correct_answer": "A",
+      "explanation": "Correct answer: A — \"Information security management\". This is strongly supported by the ITIL 4 Foundation guidance on p.197 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 32,
+      "question": "Which will help solve incidents more quickly?",
+      "options": {
+        "A": "Target resolution times",
+        "B": "Escalating all incidents to support teams",
+        "C": "Collaboration between teams",
+        "D": "Detailed procedural steps for incident investigation"
+      },
+      "correct_answer": "D",
+      "explanation": "Correct answer: D — \"Detailed procedural steps for incident investigation\". This is strongly supported by the ITIL 4 Foundation guidance on p.133 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 33,
+      "question": "When is the earliest that a workaround can be documented in 'problem management'?",
+      "options": {
+        "A": "After the problem has been logged",
+        "B": "After the problem has been prioritized",
+        "C": "After the problem has been analyzed",
+        "D": "After the problem has been resolved"
+      },
+      "correct_answer": "C",
+      "explanation": "Correct answer: C — \"After the problem has been analyzed\". This is strongly supported by the ITIL 4 Foundation guidance on p.140 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 34,
+      "question": "Which is an activity of the 'problem management' practice?",
+      "options": {
+        "A": "Restoration of normal service operation as quickly as possible",
+        "B": "Prioritization of problems based on the risk that they pose",
+        "C": "Authorization of changes to resolve the cause of problems",
+        "D": "Resolution of incidents in a time that meets customer expectations"
+      },
+      "correct_answer": "B",
+      "explanation": "Correct answer: B — \"Prioritization of problems based on the risk that they pose\". This is strongly supported by the ITIL 4 Foundation guidance on p.141 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 35,
+      "question": "Which practice is MOST likely to benefit from the use of chatbots?",
+      "options": {
+        "A": "Service level management",
+        "B": "Change enablement",
+        "C": "Continual improvement",
+        "D": "Service desk"
+      },
+      "correct_answer": "D",
+      "explanation": "Correct answer: D — \"Service desk\". This is strongly supported by the ITIL 4 Foundation guidance on p.160 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 36,
+      "question": "Where are the details of the required performance outcomes of a service defined?",
+      "options": {
+        "A": "Service level agreements",
+        "B": "Service requests",
+        "C": "Service components",
+        "D": "Service offerings"
+      },
+      "correct_answer": "A",
+      "explanation": "Correct answer: A — \"Service level agreements\". This is strongly supported by the ITIL 4 Foundation guidance on p.162 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 37,
+      "question": "Which value chain activity ensures a shared understanding of the current status and required direction for all products and services?",
+      "options": {
+        "A": "Plan",
+        "B": "Improve",
+        "C": "Design and transition",
+        "D": "Deliver and support"
+      },
+      "correct_answer": "A",
+      "explanation": "Correct answer: A — \"Plan\". This is strongly supported by the ITIL 4 Foundation guidance on p.201 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 38,
+      "question": "Which practice has the purpose of ensuring that the organization's suppliers and their performance are managed appropriately to support the provision of seamless, quality products and services?",
+      "options": {
+        "A": "Release management",
+        "B": "Supplier management",
+        "C": "Service management",
+        "D": "Relationship management"
+      },
+      "correct_answer": "B",
+      "explanation": "Correct answer: B — \"Supplier management\". This is strongly supported by the ITIL 4 Foundation guidance on p.207 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 39,
+      "question": "Which two practices interact the MOST with the service desk practice?",
+      "options": {
+        "A": "Incident management and service request management",
+        "B": "Service request management and deployment management",
+        "C": "Deployment management and change enablement",
+        "D": "Change enablement and incident management"
+      },
+      "correct_answer": "A",
+      "explanation": "Correct answer: A — \"Incident management and service request management\". This is strongly supported by the ITIL 4 Foundation guidance on p.39 (Chapter 3 – The four dimensions of service management).",
+      "textbook_references": [{ "chapter": "Chapter 3 – The four dimensions of service management" }]
+    },
+    {
+      "question_number": 40,
+      "question": "Which is an activity of the 'incident management' practice?",
+      "options": {
+        "A": "Assessing and prioritizing improvement opportunities",
+        "B": "Performing service reviews with customers",
+        "C": "Providing good-quality updates when expected",
+        "D": "Automating service requests to the greatest degree possible"
+      },
+      "correct_answer": "C",
+      "explanation": "Correct answer: C — \"Providing good-quality updates when expected\". This is supported by the ITIL 4 Foundation guidance on p.132 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 41,
+      "question": "Identify the missing words in the following sentence: A user is [?] that uses services.",
+      "options": {
+        "A": "an organization",
+        "B": "a role",
+        "C": "a team",
+        "D": "a supplier"
+      },
+      "correct_answer": "B",
+      "explanation": "Correct answer: B — \"a role\". This is strongly supported by the ITIL 4 Foundation guidance on p.205 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 42,
+      "question": "Which is included in the purpose of the 'change enablement' practice?",
+      "options": {
+        "A": "Make new and changed services available for use",
+        "B": "Ensure that risks have been properly assessed",
+        "C": "Record and report selected changes of state",
+        "D": "Plan and manage the full lifecycle of all IT assets"
+      },
+      "correct_answer": "B",
+      "explanation": "Correct answer: B — \"Ensure that risks have been properly assessed\". This is strongly supported by the ITIL 4 Foundation guidance on p.128 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 43,
+      "question": "Which activity is part of the 'continual improvement' practice?",
+      "options": {
+        "A": "Identifying the cause of incidents and recommending related improvements",
+        "B": "Authorizing changes to implement improvements",
+        "C": "Logging and managing incidents that result in improvement opportunities",
+        "D": "Making business cases for improvement action"
+      },
+      "correct_answer": "D",
+      "explanation": "Correct answer: D — \"Making business cases for improvement action\". This is strongly supported by the ITIL 4 Foundation guidance on p.91 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 44,
+      "question": "In which step of the 'continual improvement model' is an improvement plan implemented?",
+      "options": {
+        "A": "What is the vision?",
+        "B": "How do we get there?",
+        "C": "Take action",
+        "D": "Did we get there?"
+      },
+      "correct_answer": "C",
+      "explanation": "Correct answer: C — \"Take action\". This is strongly supported by the ITIL 4 Foundation guidance on p.81 (CHAPTER 4).",
+      "textbook_references": [{ "chapter": "CHAPTER 4" }]
+    },
+    {
+      "question_number": 45,
+      "question": "Which is the BEST example of a standard change?",
+      "options": {
+        "A": "The review and authorization of a change requested by a customer",
+        "B": "The implementation of a critical software patch in response to a vendor security issue",
+        "C": "The installation of a software application in response to a service request",
+        "D": "The replacement of a component in response to a major incident"
+      },
+      "correct_answer": "C",
+      "explanation": "Correct answer: C — \"The installation of a software application in response to a service request\". This is strongly supported by the ITIL 4 Foundation guidance on p.146 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 46,
+      "question": "Which statement about the automation of service requests is CORRECT?",
+      "options": {
+        "A": "Service requests that cannot be automated should be handled as incidents",
+        "B": "Service requests and their fulfilment should be automated as much as possible",
+        "C": "Service requests that cannot be automated should be handled as problems",
+        "D": "Service requests and their fulfilment should be carried out by service desk staff without automation"
+      },
+      "correct_answer": "B",
+      "explanation": "Correct answer: B — \"Service requests and their fulfilment should be automated as much as possible\". This is strongly supported by the ITIL 4 Foundation guidance on p.166 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 47,
+      "question": "Which can act as an operating model for an organization?",
+      "options": {
+        "A": "The four dimensions of service management",
+        "B": "The service value chain",
+        "C": "The ITIL guiding principles",
+        "D": "Continual improvement"
+      },
+      "correct_answer": "B",
+      "explanation": "Correct answer: B — \"The service value chain\". This is strongly supported by the ITIL 4 Foundation guidance on p.67 (CHAPTER 4).",
+      "textbook_references": [{ "chapter": "CHAPTER 4" }]
+    },
+    {
+      "question_number": 48,
+      "question": "Which practice recommends the use of event-based surveys to gather feedback from customers?",
+      "options": {
+        "A": "Service level management",
+        "B": "Change enablement",
+        "C": "Service request management",
+        "D": "Problem management"
+      },
+      "correct_answer": "A",
+      "explanation": "Correct answer: A — \"Service level management\". This is strongly supported by the ITIL 4 Foundation guidance on p.165 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 49,
+      "question": "Which statement about change authorities is CORRECT?",
+      "options": {
+        "A": "Change authorities are only required for authorizing emergency changes",
+        "B": "Change authorities are assigned when each change is deployed",
+        "C": "Change authorities are only required for authorizing normal changes",
+        "D": "Change authorities are assigned for each type of change and change model"
+      },
+      "correct_answer": "D",
+      "explanation": "Correct answer: D — \"Change authorities are assigned for each type of change and change model\". This is strongly supported by the ITIL 4 Foundation guidance on p.193 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 50,
+      "question": "Which practice improves customer and user satisfaction by reducing the negative impact of service interruptions?",
+      "options": {
+        "A": "Service request management",
+        "B": "Service level management",
+        "C": "Incident management",
+        "D": "Change enablement"
+      },
+      "correct_answer": "C",
+      "explanation": "Correct answer: C — \"Incident management\". This is strongly supported by the ITIL 4 Foundation guidance on p.197 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 51,
+      "question": "Which will NOT be handled as a service request?",
+      "options": {
+        "A": "The degradation of a service",
+        "B": "The replacement of a toner cartridge",
+        "C": "The provision of a laptop",
+        "D": "A complaint about a support team"
+      },
+      "correct_answer": "A",
+      "explanation": "Correct answer: A — \"The degradation of a service\". This is strongly supported by the ITIL 4 Foundation guidance on p.166 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 52,
+      "question": "A service offering may include goods, access to resources, and service actions. Which is an example of a service action?",
+      "options": {
+        "A": "A mobile phone enables a user to work remotely",
+        "B": "A password allows a user connect to a WiFi network",
+        "C": "A license allows a user to install a software product",
+        "D": "A service desk agent provides support to a user"
+      },
+      "correct_answer": "D",
+      "explanation": "Correct answer: D — \"A service desk agent provides support to a user\". This is strongly supported by the ITIL 4 Foundation guidance on p.205 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 53,
+      "question": "Which describes a CORRECT approach to change authorization?",
+      "options": {
+        "A": "Changes included in the change schedule are pre-authorized and do not need additional authorization",
+        "B": "Normal changes should be assessed and authorized before they are deployed",
+        "C": "Emergency changes should be authorized by as many people as possible to reduce risk",
+        "D": "Normal changes are typically implemented as service requests and authorized by the service desk"
+      },
+      "correct_answer": "B",
+      "explanation": "Correct answer: B — \"Normal changes should be assessed and authorized before they are deployed\". This is strongly supported by the ITIL 4 Foundation guidance on p.129 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 54,
+      "question": "Which statement about a service value stream is CORRECT?",
+      "options": {
+        "A": "It uses prescriptive inputs and outputs",
+        "B": "It is a value chain activity",
+        "C": "It integrates practices for a specific scenario",
+        "D": "It is used to provide governance"
+      },
+      "correct_answer": "C",
+      "explanation": "Correct answer: C — \"It integrates practices for a specific scenario\". This is strongly supported by the ITIL 4 Foundation guidance on p.69 (CHAPTER 4).",
+      "textbook_references": [{ "chapter": "CHAPTER 4" }]
+    },
+    {
+      "question_number": 55,
+      "question": "Which statement about outputs is CORRECT?",
+      "options": {
+        "A": "They consist of several outcomes",
+        "B": "They capture customer demand for services",
+        "C": "They contribute to the achievement of outcomes",
+        "D": "They describe how the service performs"
+      },
+      "correct_answer": "C",
+      "explanation": "Correct answer: C — \"They contribute to the achievement of outcomes\". This is supported by the ITIL 4 Foundation guidance on p.40 (Chapter 3 – The four dimensions of service management).",
+      "textbook_references": [{ "chapter": "Chapter 3 – The four dimensions of service management" }]
+    },
+    {
+      "question_number": 56,
+      "question": "Which is an example of a business related measurement?",
+      "options": {
+        "A": "The number of passengers checked in",
+        "B": "The average time to respond to change requests",
+        "C": "The average resolution time for incidents",
+        "D": "The number of problems resolved"
+      },
+      "correct_answer": "A",
+      "explanation": "Correct answer: A — \"The number of passengers checked in\". This is strongly supported by the ITIL 4 Foundation guidance on p.21 (Chapter 2 – Key concepts of service management).",
+      "textbook_references": [{ "chapter": "Chapter 2 – Key concepts of service management" }]
+    },
+    {
+      "question_number": 57,
+      "question": "Which BEST describes the purpose of the 'improve' value chain activity?",
+      "options": {
+        "A": "To organize a major improvement initiative into several smaller initiatives",
+        "B": "To make new and improved services and features available for use",
+        "C": "To ensure a shared understanding of the vision and improvement direction for all products and services",
+        "D": "To continually improve all products and services across all value chain activities"
+      },
+      "correct_answer": "D",
+      "explanation": "Correct answer: D — \"To continually improve all products and services across all value chain activities\". This is strongly supported by the ITIL 4 Foundation guidance on p.72 (CHAPTER 4).",
+      "textbook_references": [{ "chapter": "CHAPTER 4" }]
+    },
+    {
+      "question_number": 58,
+      "question": "Which includes governance, management practices, and continual improvement?",
+      "options": {
+        "A": "The service value system",
+        "B": "The 'deliver and support' value chain activity",
+        "C": "The 'focus on value' guiding principle",
+        "D": "The 'value stream and processes' dimension"
+      },
+      "correct_answer": "A",
+      "explanation": "Correct answer: A — \"The service value system\". This is strongly supported by the ITIL 4 Foundation guidance on p.195 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 59,
+      "question": "What is the definition of a problem?",
+      "options": {
+        "A": "An unplanned interruption to a service, or reduction in the quality of a service",
+        "B": "A cause, or potential cause, of one or more incidents",
+        "C": "An incident for which a full resolution is not yet available",
+        "D": "Any change of state that has significance for the management of a configuration item (CI)"
+      },
+      "correct_answer": "B",
+      "explanation": "Correct answer: B — \"A cause, or potential cause, of one or more incidents\". This is strongly supported by the ITIL 4 Foundation guidance on p.201 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 60,
+      "question": "Which practice provides a communications point for users to report operational issues, queries and requests?",
+      "options": {
+        "A": "Incident management",
+        "B": "Continual improvement",
+        "C": "Service desk",
+        "D": "Relationship management"
+      },
+      "correct_answer": "C",
+      "explanation": "Correct answer: C — \"Service desk\". This is strongly supported by the ITIL 4 Foundation guidance on p.159 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 61,
+      "question": "Which dimension is MOST concerned with skills, competencies, roles and responsibilities?",
+      "options": {
+        "A": "Organizations and people",
+        "B": "Information and technology",
+        "C": "Partners and suppliers",
+        "D": "Value streams and processes"
+      },
+      "correct_answer": "A",
+      "explanation": "Correct answer: A — \"Organizations and people\". This is strongly supported by the ITIL 4 Foundation guidance on p.200 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 62,
+      "question": "An organization asks a stakeholder to review a planned change. Which guiding principle does this demonstrate?",
+      "options": {
+        "A": "Collaborate and promote visibility",
+        "B": "Start where you are",
+        "C": "Focus on value",
+        "D": "Keep it simple and practical"
+      },
+      "correct_answer": "A",
+      "explanation": "Correct answer: A — \"Collaborate and promote visibility\". This is strongly supported by the ITIL 4 Foundation guidance on p.59 (CHAPTER 4).",
+      "textbook_references": [{ "chapter": "CHAPTER 4" }]
+    },
+    {
+      "question_number": 63,
+      "question": "Which practice has a strong influence on the user experience and perception of the service provider?",
+      "options": {
+        "A": "Service desk",
+        "B": "Change enablement",
+        "C": "Service level management",
+        "D": "Supplier management"
+      },
+      "correct_answer": "A",
+      "explanation": "Correct answer: A — \"Service desk\". This is strongly supported by the ITIL 4 Foundation guidance on p.160 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 64,
+      "question": "Which statement about service requests is CORRECT?",
+      "options": {
+        "A": "Complex service requests should be dealt with as normal changes",
+        "B": "Service requests that require simple workflows should be dealt with as incidents",
+        "C": "Service requests require workflows that should use manual procedures and avoid automation",
+        "D": "Service requests are usually formalized using standard procedures for initiation, approval and fulfilment"
+      },
+      "correct_answer": "D",
+      "explanation": "Correct answer: D — \"Service requests are usually formalized using standard procedures for initiation, approval and fulfilment\". This is strongly supported by the ITIL 4 Foundation guidance on p.166 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 65,
+      "question": "Which practice is responsible for moving new or changed components to live or other environments?",
+      "options": {
+        "A": "Release management",
+        "B": "Deployment management",
+        "C": "Change enablement",
+        "D": "Supplier management"
+      },
+      "correct_answer": "B",
+      "explanation": "Correct answer: B — \"Deployment management\". This is strongly supported by the ITIL 4 Foundation guidance on p.195 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 66,
+      "question": "Which dimension focuses on relationships with other organizations that are involved in the design, development, deployment and delivery of services?",
+      "options": {
+        "A": "Organizations and people",
+        "B": "Information and technology",
+        "C": "Partners and suppliers",
+        "D": "Value streams and processes"
+      },
+      "correct_answer": "C",
+      "explanation": "Correct answer: C — \"Partners and suppliers\". This is strongly supported by the ITIL 4 Foundation guidance on p.40 (Chapter 3 – The four dimensions of service management).",
+      "textbook_references": [{ "chapter": "Chapter 3 – The four dimensions of service management" }]
+    },
+    {
+      "question_number": 67,
+      "question": "Which of these activities is carried out as part of 'problem management'?",
+      "options": {
+        "A": "Creating incident records",
+        "B": "Diagnosing and resolving incidents",
+        "C": "Escalating incidents to a support team for resolution",
+        "D": "Trend analysis of incident records"
+      },
+      "correct_answer": "D",
+      "explanation": "Correct answer: D — \"Trend analysis of incident records\". This is strongly supported by the ITIL 4 Foundation guidance on p.141 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 68,
+      "question": "What must always be done before an activity is automated?",
+      "options": {
+        "A": "Check that the activity has already been optimized",
+        "B": "Check that suitable new technology has been purchased",
+        "C": "Ensure that DevOps has been successfully implemented",
+        "D": "Ensure the solution removes the need for human intervention"
+      },
+      "correct_answer": "A",
+      "explanation": "Correct answer: A — \"Check that the activity has already been optimized\". This is strongly supported by the ITIL 4 Foundation guidance on p.52 (CHAPTER 4).",
+      "textbook_references": [{ "chapter": "CHAPTER 4" }]
+    },
+    {
+      "question_number": 69,
+      "question": "What is a change schedule PRIMARILY used for?",
+      "options": {
+        "A": "To help plan emergency changes",
+        "B": "To help authorize standard changes",
+        "C": "To help assign a change authority",
+        "D": "To help manage normal changes"
+      },
+      "correct_answer": "D",
+      "explanation": "Correct answer: D — \"To help manage normal changes\". This is strongly supported by the ITIL 4 Foundation guidance on p.129 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 70,
+      "question": "Which role approves the cost of services?",
+      "options": {
+        "A": "User",
+        "B": "Change authority",
+        "C": "Sponsor",
+        "D": "Customer"
+      },
+      "correct_answer": "C",
+      "explanation": "Correct answer: C — \"Sponsor\". This is strongly supported by the ITIL 4 Foundation guidance on p.206 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 71,
+      "question": "What actions does a service desk take for all issues, queries and requests that are reported to them?",
+      "options": {
+        "A": "Schedule, assess, authorize",
+        "B": "Diagnose, investigate, resolve",
+        "C": "Initiate, approve, fulfil",
+        "D": "Acknowledge, classify, own"
+      },
+      "correct_answer": "D",
+      "explanation": "Correct answer: D — \"Acknowledge, classify, own\". This is supported by the ITIL 4 Foundation guidance on p.159 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 72,
+      "question": "Which describes the utility of a service?",
+      "options": {
+        "A": "A service that is fit for use",
+        "B": "A service that meets its service level targets",
+        "C": "A service that increases constraints on the consumer",
+        "D": "A service that supports the performance of the consumer"
+      },
+      "correct_answer": "D",
+      "explanation": "Correct answer: D — \"A service that supports the performance of the consumer\". This is strongly supported by the ITIL 4 Foundation guidance on p.207 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 73,
+      "question": "Which is included in the purpose of the 'service level management' practice?",
+      "options": {
+        "A": "To maximize the number of successful service and product changes",
+        "B": "To ensure accurate information about the configuration of services is available",
+        "C": "To set clear business-based targets for service levels",
+        "D": "To ensure that suppliers and their performance are managed appropriately"
+      },
+      "correct_answer": "C",
+      "explanation": "Correct answer: C — \"To set clear business-based targets for service levels\". This is strongly supported by the ITIL 4 Foundation guidance on p.162 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 74,
+      "question": "Which usually requires a team of representatives from many stakeholder groups?",
+      "options": {
+        "A": "Fulfilling a service request",
+        "B": "Authorizing an emergency change",
+        "C": "Logging a new problem",
+        "D": "Investigating a major incident"
+      },
+      "correct_answer": "D",
+      "explanation": "Correct answer: D — \"Investigating a major incident\". This is strongly supported by the ITIL 4 Foundation guidance on p.132 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 75,
+      "question": "Which value chain activity ensures that service components meet agreed specifications?",
+      "options": {
+        "A": "Plan",
+        "B": "Design and transition",
+        "C": "Obtain/build",
+        "D": "Deliver and support"
+      },
+      "correct_answer": "C",
+      "explanation": "Correct answer: C — \"Obtain/build\". This is strongly supported by the ITIL 4 Foundation guidance on p.200 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 76,
+      "question": "What includes governance as a component?",
+      "options": {
+        "A": "Practices",
+        "B": "The service value chain",
+        "C": "The service value system",
+        "D": "The guiding principles"
+      },
+      "correct_answer": "C",
+      "explanation": "Correct answer: C — \"The service value system\". This is strongly supported by the ITIL 4 Foundation guidance on p.195 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 77,
+      "question": "Which practice needs people who understand complex systems and have creative and analytical skills?",
+      "options": {
+        "A": "Change enablement",
+        "B": "Service level management",
+        "C": "Service request management",
+        "D": "Problem management"
+      },
+      "correct_answer": "D",
+      "explanation": "Correct answer: D — \"Problem management\". This is strongly supported by the ITIL 4 Foundation guidance on p.142 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 78,
+      "question": "What is the definition of a known error?",
+      "options": {
+        "A": "An unplanned interruption to a service, or reduction in the quality of a service",
+        "B": "A cause, or potential cause, of one or more incident",
+        "C": "A problem that has been analyzed and has not been resolved",
+        "D": "Any change of state that has significance for the management of a service or other configuration item (CI)"
+      },
+      "correct_answer": "C",
+      "explanation": "Correct answer: C — \"A problem that has been analyzed and has not been resolved\". This is strongly supported by the ITIL 4 Foundation guidance on p.140 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    },
+    {
+      "question_number": 79,
+      "question": "Which guiding principle is PRIMARILY concerned with end-to-end service delivery?",
+      "options": {
+        "A": "Focus on value",
+        "B": "Think and work holistically",
+        "C": "Optimize and automate",
+        "D": "Collaborate and promote visibility"
+      },
+      "correct_answer": "B",
+      "explanation": "Correct answer: B — \"Think and work holistically\". This is strongly supported by the ITIL 4 Foundation guidance on p.62 (CHAPTER 4).",
+      "textbook_references": [{ "chapter": "CHAPTER 4" }]
+    },
+    {
+      "question_number": 80,
+      "question": "What are typically recognized through notifications created by an IT service, CI or monitoring tool?",
+      "options": {
+        "A": "Incidents",
+        "B": "Problems",
+        "C": "Events",
+        "D": "Requests"
+      },
+      "correct_answer": "C",
+      "explanation": "Correct answer: C — \"Events\". This is strongly supported by the ITIL 4 Foundation guidance on p.138 (Chapter 5 – ITIL management practices).",
+      "textbook_references": [{ "chapter": "Chapter 5 – ITIL management practices" }]
+    }
+  ]
+}

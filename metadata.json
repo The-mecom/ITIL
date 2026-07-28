@@ -1,0 +1,8 @@
+{
+  "name": "Remix ITIL V4 Exam Prep",
+  "description": "An interactive, full-stack question \u0026 answer prep app for the ITIL V4 Foundation exam, featuring a 40-question mock exam, flashcard review deck, and performance analytics with an AI study tutor.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

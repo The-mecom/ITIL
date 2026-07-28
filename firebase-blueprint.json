@@ -1,0 +1,32 @@
+{
+  "collections": {
+    "users": {
+      "documents": {
+        "{userId}": {
+          "fields": {
+            "attempts": {
+              "type": "array",
+              "description": "List of exam attempts"
+            },
+            "flashcardStatus": {
+              "type": "map",
+              "description": "Flashcard IDs and their current status (new, learning, mastered)"
+            },
+            "streak": {
+              "type": "number",
+              "description": "Current daily study streak"
+            },
+            "lastActive": {
+              "type": "string",
+              "description": "ISO timestamp of last activity"
+            },
+            "totalStudyTime": {
+              "type": "number",
+              "description": "Total study duration in seconds"
+            }
+          }
+        }
+      }
+    }
+  }
+}
