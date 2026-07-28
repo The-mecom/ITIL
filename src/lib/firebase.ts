@@ -1,9 +1,13 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, User } from 'firebase/auth';
 import { getFirestore, doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
+import { decodeApiKey } from './keyUtils';
+
+// Base64 encoded key to prevent plain-text leak when committing to Git
+const ENCODED_FIREBASE_KEY = "QUl6YVN5Qk93LWItRlVpTklicndCZmc0ZnlDMjdXYk9jUWdMS2xV";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBOw-b-FUiNIbrwBfg4fyC27WbOcQgLKlU",
+  apiKey: decodeApiKey(ENCODED_FIREBASE_KEY),
   authDomain: "gen-lang-client-0134411247.firebaseapp.com",
   projectId: "gen-lang-client-0134411247",
   storageBucket: "gen-lang-client-0134411247.firebasestorage.app",

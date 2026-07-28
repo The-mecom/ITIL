@@ -9,10 +9,29 @@ dotenv.config();
 
 let aiClient: GoogleGenAI | null = null;
 
+// Helper to decode Base64 encoded keys if stored in environment variables or code
+function decodeKey(input: string): string {
+  if (!input) return '';
+  const trimmed = input.trim();
+  // If input is base64 encoded and does not start with standard raw prefix, decode it
+  if (!trimmed.startsWith('AIza') && /^[A-Za-z0-9+/=]+$/.test(trimmed)) {
+    try {
+      const decoded = Buffer.from(trimmed, 'base64').toString('utf-8');
+      if (decoded.length > 5) {
+        return decoded;
+      }
+    } catch {
+      // Fallback to raw string if decoding fails
+    }
+  }
+  return trimmed;
+}
+
 // Lazy initialization of Gemini client
 function getGeminiClient(): GoogleGenAI {
   if (!aiClient) {
-    const apiKey = process.env.GEMINI_API_KEY;
+    const rawKey = process.env.GEMINI_API_KEY || process.env.ENCODED_GEMINI_API_KEY || '';
+    const apiKey = decodeKey(rawKey);
     if (!apiKey) {
       throw new Error('GEMINI_API_KEY environment variable is not configured.');
     }
