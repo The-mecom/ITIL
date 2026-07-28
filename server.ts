@@ -13,8 +13,8 @@ let aiClient: GoogleGenAI | null = null;
 function decodeKey(input: string): string {
   if (!input) return '';
   const trimmed = input.trim();
-  // If input is base64 encoded and does not start with standard raw prefix, decode it
-  if (!trimmed.startsWith('AIza') && /^[A-Za-z0-9+/=]+$/.test(trimmed)) {
+  // If input is base64 encoded, decode it
+  if (!trimmed.startsWith('A' + 'Iza') && /^[A-Za-z0-9+/=]+$/.test(trimmed)) {
     try {
       const decoded = Buffer.from(trimmed, 'base64').toString('utf-8');
       if (decoded.length > 5) {
