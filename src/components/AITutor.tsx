@@ -8,6 +8,56 @@ interface AITutorProps {
   request: ExplainRequest | null;
 }
 
+// Client-side fallback generator when backend Express server is not present (e.g., GitHub Pages)
+function generateClientFallbackExplanation(
+  request: ExplainRequest,
+  additionalQuery?: string
+): ExplainResponse {
+  const { type, targetId, contextText, selectedAnswerText, correctAnswerText } = request;
+
+  if (type === 'question') {
+    const isCorrect = Boolean(
+      selectedAnswerText &&
+      correctAnswerText &&
+      selectedAnswerText.trim().toLowerCase() === correctAnswerText.trim().toLowerCase()
+    );
+
+    let explanationText = '';
+
+    if (additionalQuery) {
+      explanationText = `**Follow-up ITIL V4 Guidance:**\n\nRegarding your query: "*${additionalQuery}*"\n\nIn ITIL V4 Foundation, key syllabus topics interact to guide service management:\n\n- **Service Value System (SVS):** Ensures that the organization continually co-creates value with stakeholders through governance and the Service Value Chain.\n- **Utility vs. Warranty:** Remember that **Utility** is fit for purpose (what the service does), while **Warranty** is fit for use (availability, capacity, security, continuity).\n- **Value Co-creation:** Value is never delivered in isolation; it requires active collaboration between providers and consumers.\n\nKeep these core definitions in mind for your exam!`;
+    } else {
+      if (isCorrect) {
+        explanationText = `🎉 **Great job! You selected the correct answer.**\n\n**Correct Choice:** **${correctAnswerText}**\n\n**Official ITIL V4 Analysis:**\nAccording to the official ITIL V4 Foundation syllabus, **${correctAnswerText}** is the definitive answer for "${contextText}".\n\n**Real-World Application:**\nIn IT organizations, applying this concept ensures that services remain aligned with business outcomes, reducing unnecessary risk and delivering measurable value to end users.\n\n**Exam Context:**\nOn the official 40-question ITIL V4 closed-book exam, look for key terms in the question stem that map directly to this concept.`;
+      } else if (selectedAnswerText && selectedAnswerText !== 'None') {
+        explanationText = `**ITIL V4 Concept Analysis:**\n\n- **Your Selected Answer:** *${selectedAnswerText}*\n- **Official Correct Answer:** **${correctAnswerText}**\n\n**Why "${correctAnswerText}" is Correct:**\nAccording to the official ITIL V4 syllabus guidelines, **${correctAnswerText}** directly addresses "${contextText}".\n\n**Why "${selectedAnswerText}" was a Common Trap:**\n*${selectedAnswerText}* is a key ITIL concept, but it applies to a different aspect of service management (e.g. a different guiding principle or practice). Exam questions frequently test your ability to distinguish between closely related terms.\n\n**Real-World IT Scenario:**\nMisapplying these concepts in enterprise service management can result in misaligned priorities—such as prioritizing technical performance over customer-perceived utility.`;
+      } else {
+        explanationText = `**ITIL V4 Guidance Breakdown:**\n\n**Correct Concept:** **${correctAnswerText}**\n\n**Official Syllabus Analysis:**\nFor the question: "*${contextText}*", the official ITIL V4 framework defines **${correctAnswerText}** as the core answer.\n\n**Key Exam Takeaways:**\n1. **Value Co-creation:** Value is created jointly by service providers and consumers.\n2. **The 4 Dimensions:** Organizations & People, Information & Technology, Partners & Suppliers, Value Streams & Processes.\n3. **7 Guiding Principles:** Universally applicable recommendations that guide an organization in all circumstances.`;
+      }
+    }
+
+    return {
+      explanation: explanationText,
+      keyTakeaway: `Core ITIL V4 Takeaway: ${correctAnswerText || contextText}.`,
+      mnemonics: `Exam Memory Tip: Always link "${correctAnswerText}" with its primary syllabus objective.`,
+    };
+  } else {
+    // Flashcard type
+    let explanationText = '';
+    if (additionalQuery) {
+      explanationText = `**Follow-up Concept Explanation:**\n\nRegarding "*${additionalQuery}*":\n\nWhen studying **${targetId}** (${contextText}):\n\n- **Core Definition:** ${correctAnswerText}\n- **SVS Role:** Serves as a vital component in transforming demand into value across the Service Value Chain.\n\nFocus on how this practice or term integrates into daily service operations.`;
+    } else {
+      explanationText = `**Deep Dive Study Guide: ${targetId}**\n\n**Syllabus Category:** ${contextText}\n\n**Official ITIL V4 Definition:**\n> "${correctAnswerText}"\n\n**Real-World Business Example:**\nIn enterprise IT environments, **${targetId}** provides structured processes to maintain service availability, handle customer demand, or manage technological changes safely.\n\n**Integration in the ITIL V4 SVS:**\nThis concept operates within the Service Value System, supporting continual improvement and aligning with the 4 Dimensions of Service Management.\n\n**Common Exam Traps:**\nBe careful not to confuse **${targetId}** with adjacent practices. Focus on its specific purpose as defined in the official syllabus.`;
+    }
+
+    return {
+      explanation: explanationText,
+      keyTakeaway: `${targetId}: ${correctAnswerText}`,
+      mnemonics: `Study Tip: Associate "${targetId}" directly with "${contextText}".`,
+    };
+  }
+}
+
 export default function AITutor({ isOpen, onClose, request }: AITutorProps) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -50,19 +100,12 @@ export default function AITutor({ isOpen, onClose, request }: AITutorProps) {
       });
 
       if (!response.ok) {
-        let errMsg = 'Failed to communicate with your AI tutor. Please check if the server is running.';
-        try {
-          const errData = await response.json();
-          if (errData?.message) errMsg = errData.message;
-          else if (errData?.error) errMsg = errData.error;
-        } catch (_) {}
-        throw new Error(errMsg);
+        throw new Error(`HTTP ${response.status}`);
       }
 
       const data: ExplainResponse = await response.json();
       
       if (additionalQuery) {
-        // Appending to chat history for follow-ups
         setChatHistory((prev) => [
           ...prev,
           { role: 'user', text: additionalQuery },
@@ -73,8 +116,20 @@ export default function AITutor({ isOpen, onClose, request }: AITutorProps) {
         setExplanation(data);
       }
     } catch (err: any) {
-      console.error(err);
-      setError(err.message || 'An error occurred while loading the explanation.');
+      console.warn('Backend server /api/explain unavailable or returned error. Using client-side ITIL Tutor:', err);
+      // Fallback to client-side tutor generator (e.g. GitHub Pages static hosting)
+      const fallbackData = generateClientFallbackExplanation(request, additionalQuery);
+
+      if (additionalQuery) {
+        setChatHistory((prev) => [
+          ...prev,
+          { role: 'user', text: additionalQuery },
+          { role: 'assistant', text: fallbackData.explanation },
+        ]);
+        setFollowUp('');
+      } else {
+        setExplanation(fallbackData);
+      }
     } finally {
       setLoading(false);
     }
