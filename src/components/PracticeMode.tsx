@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  BookOpen, HelpCircle, Sparkles, CheckCircle2, XCircle, ChevronRight, 
-  RotateCcw, LogOut, Award, BarChart3, Shuffle, RefreshCw
+  BookOpen, HelpCircle, Sparkles, CheckCircle2, XCircle, ChevronRight, ChevronLeft,
+  RotateCcw, LogOut, Award, BarChart3, Shuffle, RefreshCw, ArrowLeft
 } from 'lucide-react';
 import { Question, SyllabusArea } from '../types';
 import { ITIL_QUESTIONS } from '../data/questions';
@@ -125,6 +125,15 @@ export default function PracticeMode({ onOpenTutor }: PracticeModeProps) {
     setIsSubmitted(true);
   };
 
+  // Previous Question
+  const handlePrevQuestion = () => {
+    if (currentIdx > 0) {
+      setCurrentIdx(prev => prev - 1);
+      setSelectedOption(null);
+      setIsSubmitted(false);
+    }
+  };
+
   // Next Question
   const handleNextQuestion = () => {
     if (currentIdx + 1 < questions.length) {
@@ -144,10 +153,10 @@ export default function PracticeMode({ onOpenTutor }: PracticeModeProps) {
       {/* SETUP VIEW */}
       {sessionState === 'setup' && (
         <div className="space-y-6" id="practice-setup-screen">
-          <div className="bg-slate-900/60 border border-white/10 rounded-2xl p-6 md:p-8 space-y-4 relative overflow-hidden">
+          <div className="bg-slate-900/60 dark:bg-slate-900/60 border border-white/10 dark:border-white/10 rounded-2xl p-6 md:p-8 space-y-4 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-1.5 h-full bg-indigo-500"></div>
             <div>
-              <span className="inline-block text-xs font-bold bg-indigo-500/20 text-indigo-300 px-3 py-1 rounded border border-indigo-500/30 uppercase tracking-widest mb-2">
+              <span className="inline-block text-xs font-bold bg-indigo-500/20 text-indigo-300 dark:text-indigo-300 px-3 py-1 rounded border border-indigo-500/30 uppercase tracking-widest mb-2">
                 Immediate Feedback Practice
               </span>
               <h2 className="text-2xl font-black text-white font-sans tracking-tight">ITIL® V4 Topic-focused Q&A</h2>
@@ -212,24 +221,26 @@ export default function PracticeMode({ onOpenTutor }: PracticeModeProps) {
       {/* ACTIVE QUESTIONING VIEW */}
       {sessionState === 'active' && activeQ && (
         <div className="space-y-5" id="practice-active-screen">
-          {/* Header Progress Header */}
+          {/* Header Progress Header with PROMINENT BACK BUTTON */}
           <div className="bg-slate-900/60 border border-white/10 rounded-2xl p-4 flex flex-col sm:flex-row justify-between items-center gap-3">
-            <div className="flex items-center gap-2.5">
+            <div className="flex items-center gap-3">
               <button 
-                onClick={() => {
-                  setSessionState('setup');
-                }}
-                className="p-1.5 hover:bg-white/5 rounded-lg text-slate-400 hover:text-white transition-colors cursor-pointer mr-1"
-                title="Exit Practice"
-                id="exit-practice-btn"
+                onClick={() => setSessionState('setup')}
+                className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 hover:text-white rounded-xl text-xs font-bold border border-white/10 transition-colors cursor-pointer"
+                title="Back to Topic Selection"
+                id="back-to-topics-btn"
               >
-                <LogOut className="h-4 w-4" />
+                <ArrowLeft className="h-4 w-4 text-indigo-400" />
+                <span>Back to Topics</span>
               </button>
+
+              <div className="h-5 w-[1px] bg-white/10 hidden sm:block"></div>
+
               <div>
                 <span className="text-[10px] font-black text-indigo-400 uppercase tracking-widest">
                   {selectedCategory === 'Random40' ? 'ITIL Standard 40 Practice' : activeQ.category}
                 </span>
-                <div className="text-xs text-slate-400 font-bold font-mono mt-0.5">
+                <div className="text-xs text-slate-300 font-bold font-mono mt-0.5">
                   Question {currentIdx + 1} of {questions.length}
                 </div>
               </div>
@@ -249,7 +260,7 @@ export default function PracticeMode({ onOpenTutor }: PracticeModeProps) {
           </div>
 
           {/* Progress Tracker Bar */}
-          <div className="w-full bg-slate-950 h-1 rounded-full overflow-hidden" id="practice-progress-bar">
+          <div className="w-full bg-slate-950 h-1.5 rounded-full overflow-hidden" id="practice-progress-bar">
             <div 
               className="bg-indigo-500 h-full transition-all duration-300"
               style={{ width: `${((currentIdx + (isSubmitted ? 1 : 0)) / questions.length) * 100}%` }}
@@ -260,6 +271,48 @@ export default function PracticeMode({ onOpenTutor }: PracticeModeProps) {
           <div className="bg-slate-900/80 border border-white/10 rounded-3xl p-6 md:p-8 space-y-6 shadow-2xl relative overflow-hidden" id="practice-question-card">
             <div className="absolute top-0 left-0 w-1.5 h-full bg-indigo-500/50"></div>
             
+            {/* TOP ACTION BAR (RAISED NEXT / CHECK BUTTON) */}
+            <div className="flex flex-wrap items-center justify-between border-b border-white/10 pb-4 gap-2" id="practice-top-action-bar">
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={handlePrevQuestion}
+                  disabled={currentIdx === 0}
+                  className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-bold border border-white/10 text-slate-300 hover:bg-slate-800 disabled:opacity-30 disabled:hover:bg-transparent cursor-pointer transition-colors"
+                  id="practice-top-prev-btn"
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                  <span>Previous</span>
+                </button>
+              </div>
+
+              {/* TOP RAISED NEXT & CHECK SOLUTION BUTTONS */}
+              <div className="flex items-center gap-2">
+                {!isSubmitted ? (
+                  <button
+                    disabled={selectedOption === null}
+                    onClick={handleCheckAnswer}
+                    className={`px-5 py-2 text-xs font-black uppercase tracking-wider rounded-xl transition-all flex items-center gap-1.5 ${
+                      selectedOption !== null
+                        ? 'bg-indigo-600 text-white cursor-pointer hover:bg-indigo-700 shadow-[0_0_15px_rgba(79,70,229,0.3)]'
+                        : 'bg-slate-800 text-slate-500 cursor-not-allowed'
+                    }`}
+                    id="top-check-answer-btn"
+                  >
+                    Check Solution
+                  </button>
+                ) : (
+                  <button
+                    onClick={handleNextQuestion}
+                    className="flex items-center justify-center gap-1.5 px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold uppercase tracking-wider rounded-xl cursor-pointer shadow-[0_0_15px_rgba(79,70,229,0.3)] transition-all"
+                    id="top-next-practice-question-btn"
+                  >
+                    <span>{currentIdx + 1 < questions.length ? 'Next Question' : 'View Results'}</span>
+                    <ChevronRight className="h-4 w-4" />
+                  </button>
+                )}
+              </div>
+            </div>
+
             {/* Question Stem */}
             <h3 className="text-lg md:text-xl font-bold text-white tracking-tight leading-relaxed">
               {activeQ.question}
@@ -343,24 +396,40 @@ export default function PracticeMode({ onOpenTutor }: PracticeModeProps) {
                     Explain with AI Tutor
                   </button>
 
-                  {/* Next Question Navigation */}
-                  <button
-                    onClick={handleNextQuestion}
-                    className="flex items-center justify-center gap-1.5 px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold uppercase tracking-wider rounded-xl cursor-pointer w-full sm:w-auto transition-colors"
-                    id="next-practice-question-btn"
-                  >
-                    <span>
-                      {currentIdx + 1 < questions.length ? 'Next Question' : 'View Session Results'}
-                    </span>
-                    <ChevronRight className="h-4 w-4" />
-                  </button>
+                  {/* Bottom Next Question Navigation */}
+                  <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
+                    <button
+                      onClick={handlePrevQuestion}
+                      disabled={currentIdx === 0}
+                      className="px-4 py-2.5 rounded-xl text-xs font-bold border border-white/10 text-slate-300 hover:bg-slate-800 disabled:opacity-30 cursor-pointer transition-colors"
+                    >
+                      Previous
+                    </button>
+                    <button
+                      onClick={handleNextQuestion}
+                      className="flex items-center justify-center gap-1.5 px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold uppercase tracking-wider rounded-xl cursor-pointer transition-colors"
+                      id="next-practice-question-btn"
+                    >
+                      <span>
+                        {currentIdx + 1 < questions.length ? 'Next Question' : 'View Session Results'}
+                      </span>
+                      <ChevronRight className="h-4 w-4" />
+                    </button>
+                  </div>
                 </div>
               </div>
             )}
 
-            {/* Check/Submit controls before check */}
+            {/* Bottom Check/Submit controls before check */}
             {!isSubmitted && (
-              <div className="flex justify-end pt-2">
+              <div className="flex justify-between items-center pt-2">
+                <button
+                  onClick={handlePrevQuestion}
+                  disabled={currentIdx === 0}
+                  className="px-4 py-2.5 rounded-xl text-xs font-bold border border-white/10 text-slate-300 hover:bg-slate-800 disabled:opacity-30 cursor-pointer transition-colors"
+                >
+                  Previous
+                </button>
                 <button
                   disabled={selectedOption === null}
                   onClick={handleCheckAnswer}
@@ -434,7 +503,8 @@ export default function PracticeMode({ onOpenTutor }: PracticeModeProps) {
               className="flex items-center justify-center gap-1.5 w-full sm:w-auto px-6 py-3 bg-slate-950 hover:bg-slate-900 text-slate-300 border border-white/5 rounded-xl cursor-pointer transition-colors"
               id="change-topic-btn"
             >
-              Change Focus Topic
+              <ArrowLeft className="h-4 w-4 text-indigo-400" />
+              Back to Topics Selection
             </button>
           </div>
         </div>

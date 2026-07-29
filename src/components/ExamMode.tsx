@@ -278,7 +278,7 @@ export default function ExamMode({ onAttemptCompleted, onOpenTutor, onNavigateTo
               <div className="absolute top-0 left-0 w-1 h-full bg-indigo-500"></div>
               
               {/* Active Header */}
-              <div className="flex justify-between items-center border-b border-white/10 pb-4" id="question-header">
+              <div className="flex flex-wrap justify-between items-center border-b border-white/10 pb-4 gap-2" id="question-header">
                 <div className="space-y-1">
                   <span className="text-[10px] font-bold text-indigo-300 uppercase tracking-widest bg-indigo-500/20 px-2.5 py-1 rounded border border-indigo-500/20">
                     {currentQuestion.category}
@@ -287,7 +287,38 @@ export default function ExamMode({ onAttemptCompleted, onOpenTutor, onNavigateTo
                     Question {currentIdx + 1} of {totalQs}
                   </h3>
                 </div>
-                <div className="flex items-center gap-4">
+                
+                {/* Top Action Controls (Raised Previous & Next Buttons) */}
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => setCurrentIdx((prev) => Math.max(0, prev - 1))}
+                    disabled={currentIdx === 0}
+                    className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-bold border border-white/10 text-slate-300 hover:bg-slate-800 disabled:opacity-40 cursor-pointer transition-colors"
+                    id="top-prev-question"
+                  >
+                    <ChevronLeft className="h-3.5 w-3.5" />
+                    <span>Prev</span>
+                  </button>
+
+                  {currentIdx < totalQs - 1 ? (
+                    <button
+                      onClick={() => setCurrentIdx((prev) => Math.min(totalQs - 1, prev + 1))}
+                      className="flex items-center gap-1 px-4 py-1.5 rounded-lg text-xs font-bold bg-indigo-600 text-white hover:bg-indigo-700 cursor-pointer shadow-[0_0_12px_rgba(79,70,229,0.3)] transition-all"
+                      id="top-next-question"
+                    >
+                      <span>Next</span>
+                      <ChevronRight className="h-3.5 w-3.5" />
+                    </button>
+                  ) : (
+                    <button
+                      onClick={() => handleSubmitExam(false)}
+                      className="flex items-center gap-1 px-4 py-1.5 rounded-lg text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white cursor-pointer shadow-[0_0_12px_rgba(16,185,129,0.3)] transition-all"
+                      id="top-submit-exam-button"
+                    >
+                      Submit
+                    </button>
+                  )}
+
                   {/* Flag Button */}
                   <button
                     onClick={() => toggleFlag(currentQuestion.id)}

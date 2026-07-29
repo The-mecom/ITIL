@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   Trophy, BookOpen, BarChart3, HelpCircle, Sparkles, AlertCircle, 
-  Home, Shield, Flame, GraduationCap 
+  Home, Shield, Flame, GraduationCap, Sun, Moon
 } from 'lucide-react';
 
 import ExamMode from './components/ExamMode';
@@ -16,6 +16,17 @@ import { UserProgress, ExplainRequest, FlashcardStatus, ExamAttempt } from './ty
 export default function App() {
   // Navigation: Default to dashboard
   const [activeTab, setActiveTab] = useState<'dashboard' | 'exam' | 'practice' | 'flashcard' | 'tracker'>('dashboard');
+
+  // Theme: Dark mode default, toggleable to Light mode
+  const [theme, setTheme] = useState<'dark' | 'light'>(() => {
+    return (localStorage.getItem('itil_v4_theme') as 'dark' | 'light') || 'dark';
+  });
+
+  const toggleTheme = () => {
+    const nextTheme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(nextTheme);
+    localStorage.setItem('itil_v4_theme', nextTheme);
+  };
 
   // AI Tutor Integration
   const [tutorOpen, setTutorOpen] = useState(false);
@@ -129,7 +140,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#020617] text-slate-100 font-sans flex flex-col overflow-x-hidden" id="app-viewport">
+    <div className={`min-h-screen font-sans flex flex-col overflow-x-hidden ${theme === 'light' ? 'theme-light bg-slate-100 text-slate-900' : 'bg-[#020617] text-slate-100'}`} id="app-viewport">
       {/* Immersive Theme Header Banner */}
       <header className="flex flex-col md:flex-row items-center justify-between px-6 py-4 border-b border-white/10 bg-slate-900/40 backdrop-blur-md gap-4 shrink-0" id="app-header">
         {/* Brand identity with neon shield highlight */}
@@ -204,8 +215,28 @@ export default function App() {
           </button>
         </nav>
 
-        {/* Dynamic Engagement telemetry count & Badge */}
-        <div className="flex items-center gap-5" id="telemetry-bar">
+        {/* Dynamic Engagement telemetry count & Theme Toggle */}
+        <div className="flex items-center gap-4" id="telemetry-bar">
+          {/* Light / Dark Mode Toggle Button */}
+          <button
+            onClick={toggleTheme}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 bg-slate-950/60 hover:bg-slate-800 text-xs font-bold transition-colors cursor-pointer"
+            title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} Mode`}
+            id="theme-toggle-btn"
+          >
+            {theme === 'dark' ? (
+              <>
+                <Sun className="w-4 h-4 text-amber-400" />
+                <span className="hidden sm:inline text-amber-300">Light</span>
+              </>
+            ) : (
+              <>
+                <Moon className="w-4 h-4 text-indigo-500" />
+                <span className="hidden sm:inline text-indigo-600">Dark</span>
+              </>
+            )}
+          </button>
+
           <div className="text-right hidden sm:block">
             <p className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Daily Streak</p>
             <p className="text-sm font-mono font-bold text-orange-400 flex items-center justify-end gap-1">
