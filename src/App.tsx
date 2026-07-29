@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   Trophy, BookOpen, BarChart3, HelpCircle, Sparkles, AlertCircle, 
-  Home, Shield, Flame, GraduationCap, Sun, Moon
+  Home, Shield, Flame, GraduationCap, Sun, Moon, Tv
 } from 'lucide-react';
 
 import ExamMode from './components/ExamMode';
@@ -26,6 +26,19 @@ export default function App() {
     const nextTheme = theme === 'dark' ? 'light' : 'dark';
     setTheme(nextTheme);
     localStorage.setItem('itil_v4_theme', nextTheme);
+  };
+
+  // Presentation Mode: Projector / High-Visibility Classroom Mode
+  const [presentationMode, setPresentationMode] = useState<boolean>(() => {
+    return localStorage.getItem('itil_v4_presentation') === 'true';
+  });
+
+  const togglePresentationMode = () => {
+    setPresentationMode(prev => {
+      const next = !prev;
+      localStorage.setItem('itil_v4_presentation', String(next));
+      return next;
+    });
   };
 
   // AI Tutor Integration
@@ -140,7 +153,7 @@ export default function App() {
   };
 
   return (
-    <div className={`min-h-screen font-sans flex flex-col overflow-x-hidden ${theme === 'light' ? 'theme-light bg-slate-100 text-slate-900' : 'bg-[#020617] text-slate-100'}`} id="app-viewport">
+    <div className={`min-h-screen font-sans flex flex-col overflow-x-hidden ${theme === 'light' ? 'theme-light bg-slate-100 text-slate-900' : 'bg-[#020617] text-slate-100'} ${presentationMode ? 'presentation-mode' : ''}`} id="app-viewport">
       {/* Immersive Theme Header Banner */}
       <header className="flex flex-col md:flex-row items-center justify-between px-6 py-4 border-b border-white/10 bg-slate-900/40 backdrop-blur-md gap-4 shrink-0" id="app-header">
         {/* Brand identity with neon shield highlight */}
@@ -151,7 +164,14 @@ export default function App() {
             </svg>
           </div>
           <div>
-            <h1 className="text-xl font-black tracking-tight text-white">ITIL V4 <span className="text-indigo-400">MAESTRO</span></h1>
+            <h1 className="text-xl font-black tracking-tight text-white flex items-center gap-2">
+              ITIL V4 <span className="text-indigo-400">MAESTRO</span>
+              {presentationMode && (
+                <span className="text-[10px] bg-amber-500 text-slate-950 px-2 py-0.5 rounded font-black tracking-widest uppercase shadow">
+                  PROJ VIEW
+                </span>
+              )}
+            </h1>
             <p className="text-[10px] uppercase tracking-[0.2em] text-slate-400 font-bold">Strategic Exam Simulation</p>
           </div>
         </div>
@@ -216,7 +236,22 @@ export default function App() {
         </nav>
 
         {/* Dynamic Engagement telemetry count & Theme Toggle */}
-        <div className="flex items-center gap-4" id="telemetry-bar">
+        <div className="flex items-center gap-2 sm:gap-4" id="telemetry-bar">
+          {/* Presentation Mode Toggle Button */}
+          <button
+            onClick={togglePresentationMode}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full border transition-all cursor-pointer font-bold text-xs ${
+              presentationMode
+                ? 'bg-amber-500 text-slate-950 border-amber-400 shadow-[0_0_12px_rgba(245,158,11,0.5)] font-extrabold'
+                : 'border-white/10 bg-slate-950/60 hover:bg-slate-800 text-slate-300'
+            }`}
+            title="Toggle Projector Presentation Mode (Larger Text & Maximum High-Contrast Visibility)"
+            id="presentation-toggle-btn"
+          >
+            <Tv className={`w-4 h-4 ${presentationMode ? 'text-slate-950' : 'text-amber-400'}`} />
+            <span className="hidden sm:inline">{presentationMode ? 'Projector ON' : 'Presentation'}</span>
+          </button>
+
           {/* Light / Dark Mode Toggle Button */}
           <button
             onClick={toggleTheme}
@@ -247,13 +282,28 @@ export default function App() {
           
           <div className="flex items-center gap-2 px-3.5 py-1.5 bg-indigo-500/10 border border-indigo-500/20 rounded-full text-indigo-300 text-xs font-semibold">
             <GraduationCap className="w-4 h-4 text-indigo-400" />
-            <span>Candidate Portal</span>
+            <span className="hidden md:inline">Candidate Portal</span>
           </div>
         </div>
       </header>
 
       {/* Main Study Arena with active route panel rendering */}
       <main className="flex-1 p-4 md:p-8 overflow-y-auto" id="main-content-scroll">
+        {presentationMode && (
+          <div className="mb-4 p-3 bg-amber-500/15 border-2 border-amber-500/40 rounded-xl flex items-center justify-between gap-4 text-amber-800 dark:text-amber-200 font-semibold text-xs md:text-sm shadow-md" id="presentation-mode-banner">
+            <div className="flex items-center gap-2">
+              <Tv className="w-5 h-5 text-amber-500 shrink-0" />
+              <span><strong>Projector Presentation Mode Active</strong> — Text size, contrast, and line spacing are optimized for distance reading & lecture displays.</span>
+            </div>
+            <button 
+              onClick={togglePresentationMode}
+              className="px-3 py-1 bg-amber-500 text-slate-950 hover:bg-amber-400 font-bold rounded-lg text-xs cursor-pointer transition-colors shrink-0"
+            >
+              Exit Mode
+            </button>
+          </div>
+        )}
+
         {activeTab === 'dashboard' && (
           <Dashboard 
             progress={progress} 

@@ -408,4 +408,172 @@
   color: #0f172a !important;
 }
 
+/* ==========================================
+   PRESENTATION MODE (PROJECTOR & LECTURE DISPLAY)
+   ========================================== */
+
+/* 1. Root & Base Typography Scaling */
+.presentation-mode {
+  font-size: 1.15rem !important;
+  line-height: 1.65 !important;
+  letter-spacing: 0.01em !important;
+}
+
+.presentation-mode p,
+.presentation-mode span:not(.font-mono),
+.presentation-mode label,
+.presentation-mode li {
+  font-weight: 600 !important;
+}
+
+/* Headings boost */
+.presentation-mode h1 {
+  font-size: 2.25rem !important;
+  font-weight: 900 !important;
+}
+
+.presentation-mode h2 {
+  font-size: 1.75rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em !important;
+}
+
+.presentation-mode h3 {
+  font-size: 1.45rem !important;
+  font-weight: 800 !important;
+}
+
+.presentation-mode h4 {
+  font-size: 1.3rem !important;
+  font-weight: 800 !important;
+}
+
+/* 2. Questions & Exam/Practice Stems for Distance Reading */
+.presentation-mode #practice-question-card h2,
+.presentation-mode #practice-question-card h3,
+.presentation-mode #practice-question-card p.text-xl,
+.presentation-mode #practice-question-card p.text-2xl,
+.presentation-mode #exam-question-card h2,
+.presentation-mode #exam-question-card h3,
+.presentation-mode #exam-question-card p.text-xl,
+.presentation-mode #exam-question-card p.text-2xl {
+  font-size: 1.75rem !important;
+  font-weight: 800 !important;
+  line-height: 1.5 !important;
+  color: #ffffff !important;
+}
+
+.theme-light.presentation-mode #practice-question-card h2,
+.theme-light.presentation-mode #practice-question-card h3,
+.theme-light.presentation-mode #practice-question-card p.text-xl,
+.theme-light.presentation-mode #practice-question-card p.text-2xl,
+.theme-light.presentation-mode #exam-question-card h2,
+.theme-light.presentation-mode #exam-question-card h3,
+.theme-light.presentation-mode #exam-question-card p.text-xl,
+.theme-light.presentation-mode #exam-question-card p.text-2xl {
+  color: #0f172a !important;
+}
+
+/* 3. Option Choice Buttons (Practice & Exam Mode) */
+.presentation-mode #practice-options-container button,
+.presentation-mode #options-container button {
+  padding: 1.25rem 1.5rem !important;
+  font-size: 1.3rem !important;
+  font-weight: 700 !important;
+  border-width: 2px !important;
+  border-radius: 0.85rem !important;
+}
+
+.presentation-mode #practice-options-container button span,
+.presentation-mode #options-container button span {
+  font-size: 1.25rem !important;
+  line-height: 1.45 !important;
+}
+
+/* Letter Badges (A, B, C, D) */
+.presentation-mode #practice-options-container button span:first-child,
+.presentation-mode #options-container button span:first-child {
+  width: 2.75rem !important;
+  height: 2.75rem !important;
+  font-size: 1.2rem !important;
+  font-weight: 900 !important;
+  flex-shrink: 0 !important;
+}
+
+/* 4. Action Buttons (Check Solution, Next, Submit, Reveal Answer) */
+.presentation-mode button.bg-indigo-600,
+.presentation-mode button.bg-emerald-600,
+.presentation-mode button.bg-purple-600,
+.presentation-mode #top-check-answer-btn,
+.presentation-mode #practice-check-btn,
+.presentation-mode #exam-check-btn {
+  font-size: 1.2rem !important;
+  font-weight: 900 !important;
+  padding: 0.95rem 2rem !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* 5. Flashcards in Presentation Mode */
+.presentation-mode #flashcard-front h2,
+.presentation-mode #flashcard-front h3 {
+  font-size: 2.5rem !important;
+  font-weight: 900 !important;
+  line-height: 1.35 !important;
+}
+
+.presentation-mode #flashcard-back p {
+  font-size: 1.45rem !important;
+  font-weight: 700 !important;
+  line-height: 1.65 !important;
+}
+
+.presentation-mode #flashcard-front,
+.presentation-mode #flashcard-back {
+  padding: 2.75rem !important;
+  min-height: 360px !important;
+  border-width: 3px !important;
+}
+
+/* 6. Dashboard Cards & Metrics */
+.presentation-mode #dash-advisor-card,
+.presentation-mode #ai-recommendations-card,
+.presentation-mode #streak-milestone-card,
+.presentation-mode #readiness-gauge-card,
+.presentation-mode #tracker-stats-card {
+  padding: 2rem !important;
+  border-width: 2px !important;
+}
+
+.presentation-mode #dash-advisor-card button {
+  font-size: 1.15rem !important;
+  font-weight: 800 !important;
+  padding: 0.95rem 1.4rem !important;
+}
+
+/* 7. AI Tutor Drawer */
+.presentation-mode [id^="ai-tutor"] {
+  font-size: 1.2rem !important;
+}
+
+.presentation-mode [id^="ai-tutor"] p,
+.presentation-mode [id^="ai-tutor"] li {
+  font-size: 1.2rem !important;
+  line-height: 1.75 !important;
+  font-weight: 600 !important;
+}
+
+/* 8. Extra High Contrast Borders for Projectors */
+.presentation-mode .border,
+.presentation-mode .border-b,
+.presentation-mode .border-t {
+  border-color: rgba(148, 163, 184, 0.45) !important;
+}
+
+.theme-light.presentation-mode .border,
+.theme-light.presentation-mode .border-b,
+.theme-light.presentation-mode .border-t {
+  border-color: #64748b !important;
+}
+
+
 
