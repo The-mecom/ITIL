@@ -18,15 +18,34 @@
   -webkit-transform: rotateY(180deg);
 }
 
-/* Light Mode Theme Overrides */
+/* ==========================================
+   GLOBAL LIGHT MODE STYLING & HIGH CONTRAST OVERRIDES
+   ========================================== */
+
 .theme-light {
   background-color: #f8fafc !important;
   color: #0f172a !important;
 }
 
+/* 1. Remove Dark Background Gradients in Light Mode */
+.theme-light [class*="bg-gradient-to"],
+.theme-light .from-slate-900,
+.theme-light .from-slate-950,
+.theme-light .from-indigo-950,
+.theme-light .from-indigo-900,
+.theme-light .via-slate-900,
+.theme-light .via-indigo-950,
+.theme-light .to-slate-900,
+.theme-light .to-slate-950,
+.theme-light .to-indigo-950 {
+  background-image: none !important;
+  background-color: #ffffff !important;
+}
+
+/* Light Mode Header & Footer */
 .theme-light #app-header {
   background-color: rgba(255, 255, 255, 0.95) !important;
-  border-bottom-color: #e2e8f0 !important;
+  border-bottom-color: #cbd5e1 !important;
 }
 
 .theme-light #app-header h1 {
@@ -38,12 +57,13 @@
   border-color: #cbd5e1 !important;
 }
 
-.theme-light #navigation-bar button {
-  color: #475569;
+.theme-light #navigation-bar button:not(.bg-indigo-600) {
+  color: #475569 !important;
 }
 
-.theme-light #navigation-bar button:hover {
-  color: #0f172a;
+.theme-light #navigation-bar button:not(.bg-indigo-600):hover {
+  color: #0f172a !important;
+  background-color: #e2e8f0 !important;
 }
 
 .theme-light #app-footer {
@@ -52,18 +72,44 @@
   color: #64748b !important;
 }
 
-/* Generic container & card overrides for Light Mode */
-.theme-light .bg-slate-900\/60,
-.theme-light .bg-slate-900\/80,
+/* Welcome Hero Banner in Light Mode */
+.theme-light #dash-welcome-banner {
+  background-image: linear-gradient(to right, #ffffff, #f1f5f9) !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* 2. Universal Container & Card Overrides for Light Mode */
 .theme-light .bg-slate-900,
+.theme-light .bg-slate-900\/90,
+.theme-light .bg-slate-900\/80,
+.theme-light .bg-slate-900\/60,
 .theme-light .bg-slate-900\/40,
+.theme-light .bg-slate-950,
+.theme-light .bg-slate-950\/90,
+.theme-light .bg-slate-950\/80,
+.theme-light .bg-slate-950\/60,
 .theme-light .bg-slate-950\/50,
 .theme-light .bg-slate-950\/40,
-.theme-light .bg-slate-950\/60,
-.theme-light .bg-slate-950\/80,
-.theme-light .bg-slate-950 {
+.theme-light .bg-slate-950\/20,
+.theme-light .bg-indigo-950,
+.theme-light .bg-indigo-950\/90,
+.theme-light .bg-indigo-950\/80,
+.theme-light .bg-indigo-950\/60,
+.theme-light .bg-indigo-950\/50,
+.theme-light .bg-indigo-950\/20,
+.theme-light #flashcard-front,
+.theme-light #flashcard-back,
+.theme-light #ai-recommendations-card,
+.theme-light #dash-advisor-card,
+.theme-light #streak-milestone-card,
+.theme-light #dash-quick-metrics,
+.theme-light #readiness-gauge-card,
+.theme-light #tracker-stats-card,
+.theme-light #practice-question-card,
+.theme-light #exam-question-card {
   background-color: #ffffff !important;
-  border-color: #e2e8f0 !important;
+  border-color: #cbd5e1 !important;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05) !important;
 }
 
@@ -71,34 +117,295 @@
 .theme-light .border-white\/5,
 .theme-light .border-white\/15,
 .theme-light .border-white\/20 {
-  border-color: #e2e8f0 !important;
+  border-color: #cbd5e1 !important;
 }
 
-.theme-light .text-white,
+/* 3. High-Contrast Text Mapping in Light Mode */
 .theme-light .text-slate-100,
 .theme-light .text-slate-200,
 .theme-light .text-slate-300 {
   color: #0f172a !important;
 }
 
+/* White text becomes dark slate ONLY on non-solid light backgrounds */
+.theme-light .text-white:not(.bg-indigo-600):not(.bg-indigo-500):not(.bg-indigo-700):not(.bg-indigo-800):not(.bg-emerald-600):not(.bg-emerald-500):not(.bg-rose-600):not(.bg-purple-600):not(.bg-purple-700):not(.bg-indigo-600 *):not(.bg-indigo-500 *):not(.bg-indigo-700 *):not(.bg-indigo-800 *):not(.bg-emerald-600 *):not(.bg-emerald-500 *):not(.bg-rose-600 *):not(.bg-purple-600 *):not(.bg-purple-700 *) {
+  color: #0f172a !important;
+}
+
 .theme-light .text-slate-400,
 .theme-light .text-slate-500 {
-  color: #475569 !important;
+  color: #334155 !important;
 }
 
-.theme-light .bg-slate-800 {
-  background-color: #e2e8f0 !important;
-  color: #1e293b !important;
+/* Indigo colors in Light Mode */
+.theme-light .text-indigo-100,
+.theme-light .text-indigo-200,
+.theme-light .text-indigo-300,
+.theme-light .text-indigo-400 {
+  color: #4338ca !important; /* High contrast deep indigo */
 }
 
-.theme-light .bg-indigo-950\/40 {
-  background-color: #e0e7ff !important;
-  border-color: #818cf8 !important;
+/* Emerald colors in Light Mode */
+.theme-light .text-emerald-100,
+.theme-light .text-emerald-200,
+.theme-light .text-emerald-300,
+.theme-light .text-emerald-400 {
+  color: #047857 !important; /* Deep emerald */
 }
 
-.theme-light .hover\:bg-slate-900\/60:hover,
-.theme-light .hover\:bg-slate-900:hover,
-.theme-light .hover\:bg-slate-800:hover {
+/* Amber colors in Light Mode */
+.theme-light .text-amber-100,
+.theme-light .text-amber-200,
+.theme-light .text-amber-300,
+.theme-light .text-amber-400 {
+  color: #b45309 !important; /* Deep amber */
+}
+
+/* Rose colors in Light Mode */
+.theme-light .text-rose-100,
+.theme-light .text-rose-200,
+.theme-light .text-rose-300,
+.theme-light .text-rose-400 {
+  color: #be123c !important; /* Deep rose */
+}
+
+/* 4. Secondary Buttons, Pills & Controls in Light Mode */
+.theme-light .bg-slate-800,
+.theme-light .bg-slate-800\/80,
+.theme-light .bg-slate-800\/90,
+.theme-light .bg-slate-800\/40,
+.theme-light .bg-slate-800\/50,
+.theme-light .bg-slate-700,
+.theme-light #back-to-topics-btn,
+.theme-light #practice-top-prev-btn,
+.theme-light #top-prev-question,
+.theme-light #change-topic-btn {
   background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
 }
+
+.theme-light .hover\:bg-slate-800:hover,
+.theme-light .hover\:bg-slate-700:hover,
+.theme-light .hover\:bg-slate-900:hover,
+.theme-light #back-to-topics-btn:hover,
+.theme-light #practice-top-prev-btn:hover {
+  background-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+/* AI Study Advisor Recommendation Action Items */
+.theme-light #ai-recommendations-card button,
+.theme-light #ai-blank-state button,
+.theme-light #dash-advisor-card button {
+  background-color: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+  color: #3730a3 !important;
+}
+
+.theme-light #ai-recommendations-card button:hover,
+.theme-light #ai-blank-state button:hover,
+.theme-light #dash-advisor-card button:hover {
+  background-color: #e0e7ff !important;
+  color: #1e1b4b !important;
+}
+
+/* Flashcard Concept Box inside back of card */
+.theme-light .bg-indigo-950\/40 {
+  background-color: #f0f3ff !important;
+  border-color: #c7d2fe !important;
+  color: #1e1b4b !important;
+}
+
+.theme-light .bg-indigo-950\/40 * {
+  color: #1e1b4b !important;
+}
+
+/* 5. Option Card States (Practice & Exam Mode - HIGH CONTRAST FIX) */
+
+/* Unselected Option Button */
+.theme-light #practice-options-container button:not(.bg-indigo-600\/10):not(.bg-emerald-500\/10):not(.bg-rose-500\/10),
+.theme-light #options-container button:not(.bg-indigo-600\/10):not(.bg-emerald-500\/10):not(.bg-rose-500\/10) {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+.theme-light #practice-options-container button:not(.bg-indigo-600\/10):hover,
+.theme-light #options-container button:not(.bg-indigo-600\/10):hover {
+  background-color: #f8fafc !important;
+  border-color: #94a3b8 !important;
+}
+
+/* Unselected Option Letter Badge */
+.theme-light #practice-options-container button span.bg-slate-800,
+.theme-light #options-container button span.bg-slate-800 {
+  background-color: #e2e8f0 !important;
+  color: #334155 !important;
+}
+
+/* Selected Option Card State */
+.theme-light .bg-indigo-600\/10,
+.theme-light .border-indigo-500\/50,
+.theme-light .border-indigo-500 {
+  background-color: #e0e7ff !important; /* Soft indigo tint */
+  border-color: #4f46e5 !important; /* Solid indigo border */
+  color: #1e1b4b !important;
+}
+
+.theme-light .bg-indigo-600\/10 *,
+.theme-light button.bg-indigo-600\/10 span {
+  color: #1e1b4b !important;
+}
+
+/* Selected Option Letter Badge */
+.theme-light .bg-indigo-600\/10 span.bg-indigo-500,
+.theme-light .bg-indigo-600\/10 span.bg-indigo-600,
+.theme-light button.bg-indigo-600\/10 span:first-child {
+  background-color: #4f46e5 !important;
+  color: #ffffff !important;
+}
+
+/* Correct Option Card State */
+.theme-light .bg-emerald-500\/10,
+.theme-light .border-emerald-500\/30 {
+  background-color: #d1fae5 !important;
+  border-color: #10b981 !important;
+  color: #064e3b !important;
+}
+
+.theme-light .bg-emerald-500\/10 * {
+  color: #064e3b !important;
+}
+
+.theme-light .bg-emerald-500\/10 span:first-child {
+  background-color: #10b981 !important;
+  color: #ffffff !important;
+}
+
+/* Wrong Option Card State */
+.theme-light .bg-rose-500\/10,
+.theme-light .border-rose-500\/30 {
+  background-color: #ffe4e6 !important;
+  border-color: #f43f5e !important;
+  color: #881337 !important;
+}
+
+.theme-light .bg-rose-500\/10 * {
+  color: #881337 !important;
+}
+
+.theme-light .bg-rose-500\/10 span:first-child {
+  background-color: #f43f5e !important;
+  color: #ffffff !important;
+}
+
+/* 6. Solid Primary Buttons (Check Solution, Next, Submit, Active Tabs) ALWAYS Maintain High-Contrast Crisp White Text */
+.bg-indigo-600,
+.bg-indigo-500,
+.bg-indigo-700,
+.bg-indigo-800,
+.bg-purple-600,
+.bg-purple-700,
+.bg-emerald-600,
+.bg-emerald-500,
+.bg-rose-600,
+.theme-light .bg-indigo-600,
+.theme-light .bg-indigo-500,
+.theme-light .bg-indigo-700,
+.theme-light .bg-indigo-800,
+.theme-light .bg-purple-600,
+.theme-light .bg-purple-700,
+.theme-light .bg-emerald-600,
+.theme-light .bg-emerald-500,
+.theme-light .bg-rose-600,
+.theme-light button.bg-indigo-600,
+.theme-light button.bg-indigo-500,
+.theme-light #navigation-bar button.bg-indigo-600,
+.theme-light #navigation-bar button.bg-indigo-500,
+.theme-light #top-check-answer-btn.bg-indigo-600,
+.theme-light #practice-check-btn.bg-indigo-600,
+.theme-light #exam-check-btn.bg-indigo-600 {
+  background-color: #4f46e5 !important;
+  color: #ffffff !important;
+}
+
+.bg-indigo-600 *,
+.bg-indigo-500 *,
+.bg-indigo-700 *,
+.bg-indigo-800 *,
+.bg-purple-600 *,
+.bg-purple-700 *,
+.bg-emerald-600 *,
+.bg-emerald-500 *,
+.bg-rose-600 *,
+.theme-light .bg-indigo-600 *,
+.theme-light .bg-indigo-500 *,
+.theme-light .bg-indigo-700 *,
+.theme-light .bg-indigo-800 *,
+.theme-light .bg-purple-600 *,
+.theme-light .bg-purple-700 *,
+.theme-light .bg-emerald-600 *,
+.theme-light .bg-emerald-500 *,
+.theme-light .bg-rose-600 *,
+.theme-light button.bg-indigo-600 *,
+.theme-light button.bg-indigo-500 *,
+.theme-light #navigation-bar button.bg-indigo-600 *,
+.theme-light #navigation-bar button.bg-indigo-500 * {
+  color: #ffffff !important;
+}
+
+.theme-light .bg-indigo-600:hover {
+  background-color: #4338ca !important;
+}
+
+.theme-light .bg-emerald-600:hover {
+  background-color: #059669 !important;
+}
+
+/* 7. Category & Info Badges in Light Mode */
+.theme-light .bg-indigo-500\/20,
+.theme-light .bg-indigo-600\/20 {
+  background-color: #e0e7ff !important;
+  color: #3730a3 !important;
+  border-color: #c7d2fe !important;
+}
+
+.theme-light .bg-emerald-500\/20,
+.theme-light .bg-emerald-500\/10 {
+  background-color: #d1fae5 !important;
+  color: #065f46 !important;
+  border-color: #a7f3d0 !important;
+}
+
+.theme-light .bg-amber-500\/20,
+.theme-light .bg-amber-500\/10 {
+  background-color: #fef3c7 !important;
+  color: #92400e !important;
+  border-color: #fde68a !important;
+}
+
+/* 8. Inputs & Textareas in Light Mode */
+.theme-light input,
+.theme-light textarea,
+.theme-light select {
+  color: #0f172a !important;
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+
+.theme-light input::placeholder,
+.theme-light textarea::placeholder {
+  color: #64748b !important;
+}
+
+/* 9. AI Tutor Drawer & Modals in Light Mode */
+.theme-light [id^="ai-tutor"],
+.theme-light .bg-slate-900\/95,
+.theme-light .bg-slate-900\/90 {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
 
